@@ -1,4 +1,4 @@
-# {scwplot}
+# scwplot
 
 The {scwplot} package provides functions for applying consistent SCW-branded aesthetics to ggplot visualisations in R, as well as additional functionality that produces clean plots and makes plotting in R easier.
 
@@ -34,9 +34,11 @@ The package is currently in active development, and as such there are a number o
 
 - [x] Migrate package from GitLab to GitHub
 - [x] Check package functions
-- [ ] Submit issues
-- [ ] Clean up package functions
+- [x] Submit issues
+- [x] Clean up package functions
 - [ ] Redevelop discrete/continuous/qualitative palettes so that they are more aesthetically pleasing, accessible, and follow good data visualisation principles
+- [ ] Put together full package documentation
+- [ ] Add testing for every function
 
 ## Acknowledgements
 
