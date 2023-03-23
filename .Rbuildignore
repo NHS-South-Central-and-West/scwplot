@@ -1,2 +1,4 @@
+^renv$
+^renv\.lock$
 ^SCWstyleR\.Rproj$
 ^\.Rproj\.user$
