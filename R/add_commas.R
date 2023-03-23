@@ -1,7 +1,7 @@
 #' @export
-abs_comma <-
+add_commas <-
   function (x,
-            ...) {format(abs(x),
+            ...) {format(x,
                          ...,
                          big.mark = ",",
                          scientific = FALSE,
