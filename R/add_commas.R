@@ -1,5 +1,5 @@
 #' @export
-abs_comma <-
+add_commas <-
   function (x,
             ...) {format(abs(x),
                          ...,
