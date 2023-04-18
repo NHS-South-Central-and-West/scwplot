@@ -1,5 +1,3 @@
-windowsFonts(`Fira Sans` = windowsFont("Fira Sans"))
-
 #' Add SCW theme to ggplot chart
 #'
 #' This function allows you to add the SCW theme to your ggplot graphics.
@@ -14,7 +12,7 @@ windowsFonts(`Fira Sans` = windowsFont("Fira Sans"))
 #' }
 scw_theme <-
   function() {ggplot2::theme(
-    plot.title = ggplot2::element_text(family = "Fira Sans",
+    plot.title = ggplot2::element_text(family = "sans",
                                        size = 14,
                                        margin = ggplot2::margin(4,
                                                                 0,
@@ -22,13 +20,13 @@ scw_theme <-
                                                                 0),
                                        face = "bold",
                                        color = "#000000"),
-    plot.subtitle = ggplot2::element_text(family = "Fira Sans",
+    plot.subtitle = ggplot2::element_text(family = "sans",
                                           size = 12,
                                           margin = ggplot2::margin(4,
                                                                    0,
                                                                    8,
                                                                    0)),
-    plot.caption = ggplot2::element_text(family = "Fira Sans",
+    plot.caption = ggplot2::element_text(family = "sans",
                                          size = 12,
                                          color = "#768692",
                                          hjust = 0),
@@ -37,7 +35,7 @@ scw_theme <-
     legend.background = ggplot2::element_blank(),
     legend.title = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
-    legend.text = ggplot2::element_text(family = "Fira Sans",
+    legend.text = ggplot2::element_text(family = "sans",
                                         size = 12,
                                         color = "#000000"),
     legend.justification = 'left',
@@ -46,14 +44,14 @@ scw_theme <-
                            b = 0,
                            l = 0,
                            unit = "cm"),
-    axis.title = ggplot2::element_text(family = "Fira Sans",
+    axis.title = ggplot2::element_text(family = "sans",
                                        size = 12,
                                        color = "#000000"),
     axis.title.y = ggplot2::element_text(margin = margin(t = 0,
                                                          r = 10,
                                                          b = 0,
                                                          l =  0)),
-    axis.text = ggplot2::element_text(family = "Fira Sans",
+    axis.text = ggplot2::element_text(family = "sans",
                                       size = 12,
                                       color = "#000000"),
     axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5,
