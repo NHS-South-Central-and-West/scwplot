@@ -28,8 +28,7 @@ create_footer <- function (source_name) {
         hjust = 0,
         gp = grid::gpar(
           fontsize = 12,
-          fontfamily =
-            "Fira Sans",
+          fontfamily = "sans",
           col="#525252"
         )
       )
