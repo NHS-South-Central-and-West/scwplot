@@ -49,7 +49,6 @@ scw_palettes <- list(
 
   `csu_all`  = nhs_cols("scw_dark_blue", "nhs_aqua_blue", "nhs_dark_blue", "nhs_white",
                         "nhs_purple", "nhs_light_green", "nhs_aqua_green", "nhs_mid_grey", "nhs_pale_grey")
-
 )
 
 
@@ -60,6 +59,7 @@ scw_palettes <- list(
 #' @param reverse Boolean indicating whether the palette should be reversed
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
+#' @importFrom grDevices colorRampPalette
 scw_palette <- function(palette = "scw", reverse = FALSE, ...) {
   pal <- scw_palettes[[palette]]
 
