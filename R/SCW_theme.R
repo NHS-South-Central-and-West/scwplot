@@ -6,11 +6,12 @@ windowsFonts(`Fira Sans` = windowsFont("Fira Sans"))
 #' @keywords ggplot theme
 #' @export
 #' @examples
+#' \dontrun{
 #' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
 #' geom_line(colour = "#007f7f", size = 1) +
 #' geom_hline(yintercept = 0, size = 1, colour="#333333") +
 #' scw_theme()
-
+#' }
 scw_theme <-
   function() {ggplot2::theme(
     plot.title = ggplot2::element_text(family = "Fira Sans",

@@ -1,18 +1,21 @@
-Package: SCWstyleR
-Title: R Package for SCW 
-Version: 0.0.0.9000
+Package: scwplot
+Title: Making ggplot graphics using an SCW style
+Version: 0.0.0.9001
 Authors@R: 
-    person(given = "Brian",
-           family = "Lau",
-           role = c("aut", "cre"),
-           email = "brian.lau@nhs.net",
-           )
-Description: Package for the standardisation of SCW visuals and other analytical purposes around health care
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a license
+  c(
+    person("Paul", "Johnson", , "paul.johnson50@nhs.net",
+           role = c("aut", "cre")),
+    person("Brian", "Lau", , "brian.lau@nhs.net", role = c("aut"))
+  )
+Description: Makes the creation of ggplot graphics in a SWCW style easier by 
+    providing functions for consistent themeing, use of colours, and dimensons.
+License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
+Imports: 
+    ggplot2,
+    ggpubr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
