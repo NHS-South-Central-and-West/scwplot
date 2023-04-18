@@ -36,6 +36,7 @@ The package is currently in active development, and as such there are a number o
 - [x] Check package functions
 - [x] Submit issues
 - [x] Clean up package functions
+- [x] Clean up migration and set up GH Actions
 - [ ] Redevelop discrete/continuous/qualitative palettes so that they are more aesthetically pleasing, accessible, and follow good data visualisation principles
 - [ ] Put together full package documentation
 - [ ] Add testing for every function
