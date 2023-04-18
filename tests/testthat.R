@@ -1,4 +1,4 @@
 library(testthat)
-library(SCWstyleR)
+library(scwplot)
 
-test_check("SCWstyleR")
+test_check("scwplot")
