@@ -27,6 +27,44 @@ While the following functions add additional utility to the package:
 - ```add_commas()```
 - ```finalise_plot()```
 
+### Colour Palettes
+
+There are a selection of colour palettes to choose from, depending on the purpose that the palette serves in the plot.
+
+#### Sequential
+
+**`seq`**
+
+![Sequential colour palette](/images/seq.png)
+
+#### Diverging
+
+**`BuGn`**
+
+![Diverging colour palette (blue to green)](/images/BuGn.png)
+
+**`BuYlRd`**
+
+![Diverging colour palette (blue, yellow, red)](/images/BuYlRd.png)
+
+**`BuRd`**
+
+![Diverging colour palette (blue to red)](/images/BuRd.png)
+
+#### Qualitative
+
+**`qual3`**
+
+![Qualitative colour palette (3 colours)](/images/qual3.png)
+
+**`qual5`**
+
+![Qualitative colour palette (5 colours)](/images/qual5.png)
+
+**`qual7`**
+
+![Qualitative colour palette (7 colours)](/images/qual7.png)
+
 ## To-Do List
 
 The package is currently in active development, and as such there are a number of developments that have already been planned:
@@ -39,6 +77,7 @@ The package is currently in active development, and as such there are a number o
 - [ ] Redevelop discrete/continuous/qualitative palettes so that they are more aesthetically pleasing, accessible, and follow good data visualisation principles
 - [ ] Put together full package documentation
 - [ ] Add testing for every function
+- [ ] Clean up codebase
 
 ## Acknowledgements
 
