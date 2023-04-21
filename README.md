@@ -19,13 +19,12 @@ There are six primary functions in the {scwplot} package. The functions can be s
 
 The SCW theme functions are as follows:
 
-- ```scale_fill_scw()``` and ```scale_colour_scw()```
 - ```scw_theme()```
+- ```scale_fill_scw()``` and ```scale_colour_scw()```
 
 While the following functions add additional utility to the package:
 
 - ```add_commas()```
-- ```violin_plot()```
 - ```finalise_plot()```
 
 ## To-Do List
