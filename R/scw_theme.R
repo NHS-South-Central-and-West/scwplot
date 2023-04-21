@@ -2,6 +2,7 @@
 #'
 #' This function allows you to add the SCW theme to your ggplot graphics.
 #' @keywords ggplot theme
+#' @importFrom ggplot2 margin unit
 #' @export
 #' @examples
 #' \dontrun{
