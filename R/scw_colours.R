@@ -27,7 +27,7 @@ nhs_colours <- c(
 
 #' Function to extract NHS colours as hex codes
 #'
-#' @param cols Character names of NHS colours (e.g. "nhs_white")
+#' @param ... Character names of NHS colours (e.g. "nhs_white")
 #'
 nhs_cols <- function(...) {
   cols <- c(...)
