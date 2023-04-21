@@ -793,17 +793,6 @@
       ],
       "Hash": "6b0c222c5071efe0f3baf3dae9aa40e2"
     },
-    "plyr": {
-      "Package": "plyr",
-      "Version": "1.8.8",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "Rcpp"
-      ],
-      "Hash": "d744387aef9047b0b48be2933d78e862"
-    },
     "polynom": {
       "Package": "polynom",
       "Version": "1.4-1",

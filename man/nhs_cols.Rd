@@ -7,7 +7,7 @@
 nhs_cols(...)
 }
 \arguments{
-\item{cols}{Character names of NHS colours (e.g. "nhs_white")}
+\item{...}{Character names of NHS colours (e.g. "nhs_white")}
 }
 \description{
 Function to extract NHS colours as hex codes

@@ -6,7 +6,7 @@
 #' @param ... Additional arguments passed to discrete_scale() or
 #'            scale_fill_gradientn(), used respectively when discrete is TRUE or FALSE
 #'
-#' @importFrom ggplot2 discrete_scale scale_colour_gradientn
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 #' @export
 
 scale_fill_scw <- function(palette = "scw", discrete = TRUE, reverse = FALSE, ...) {
