@@ -1,33 +1,32 @@
 nhs_colours <- c(
-  `nhs_white`         = "#FFFFFF",
-  `nhs_dark_blue`     = "#003087",
-  `nhs_blue`          = "#005EB8",
-  `nhs_bright_blue`   = "#0072CE",
-  `nhs_light_blue`    = "#41B6E6",
-  `nhs_aqua_blue`     = "#00A9CE",
-  `nhs_black`         = "#231f20",
-  `nhs_dark_grey`     = "#425563",
-  `nhs_mid_grey`      = "#768692",
-  `nhs_pale_grey`     = "#E8EDEE",
-  `nhs_dark_green`    = "#006747",
-  `nhs_green`         = "#009639",
-  `nhs_light_green`   = "#78BE20",
-  `nhs_aqua_green`    = "#00A499",
-  `nhs_purple`        = "#330072",
-  `nhs_dark_pink`     = "#7C2855",
-  `nhs_pink`          = "#AE2573",
-  `nhs_dark_red`      = "#8A1538",
-  `nhs_orange`        = "#ED8B00",
-  `nhs_warm_yellow`   = "#FFB81C",
-  `nhs_yellow`        = "#FAE100",
+  nhs_white         = '#FFFFFF',
+  nhs_dark_blue     = '#003087',
+  nhs_blue          = '#005EB8',
+  nhs_bright_blue   = '#0072CE',
+  nhs_light_blue    = '#41B6E6',
+  nhs_aqua_blue     = '#00A9CE',
+  nhs_black         = '#231f20',
+  nhs_dark_grey     = '#425563',
+  nhs_mid_grey      = '#768692',
+  nhs_pale_grey     = '#E8EDEE',
+  nhs_dark_green    = '#006747',
+  nhs_green         = '#009639',
+  nhs_light_green   = '#78BE20',
+  nhs_aqua_green    = '#00A499',
+  nhs_purple        = '#330072',
+  nhs_dark_pink     = '#7C2855',
+  nhs_pink          = '#AE2573',
+  nhs_dark_red      = '#8A1538',
+  nhs_orange        = '#ED8B00',
+  nhs_warm_yellow   = '#FFB81C',
+  nhs_yellow        = '#FAE100',
 
-  `scw_dark_blue`     = "#1c355e"
+  scw_dark_blue     = '#1c355e'
 )
-
 
 #' Function to extract NHS colours as hex codes
 #'
-#' @param ... Character names of NHS colours (e.g. "nhs_white")
+#' @param ... Character names of NHS colours (e.g. 'nhs_white')
 #'
 nhs_cols <- function(...) {
   cols <- c(...)
@@ -38,20 +37,64 @@ nhs_cols <- function(...) {
   nhs_colours[cols]
 }
 
-
-
 scw_palettes <- list(
-  `scw` = nhs_cols("nhs_dark_blue", "nhs_blue", "nhs_light_blue",
-                   "nhs_dark_green", "nhs_green", "nhs_pink",
-                   "nhs_yellow"),
 
-  `csu_main`  = nhs_cols("scw_dark_blue", "nhs_aqua_blue", "nhs_dark_blue", "nhs_white"),
+  nhs =
+    nhs_cols(
+      'nhs_dark_blue', 'nhs_blue', 'nhs_light_blue', 'nhs_dark_green',
+      'nhs_green', 'nhs_pink', 'nhs_yellow'
+    ),
 
-  `csu_all`  = nhs_cols("scw_dark_blue", "nhs_aqua_blue", "nhs_dark_blue", "nhs_white",
-                        "nhs_purple", "nhs_light_green", "nhs_aqua_green", "nhs_mid_grey", "nhs_pale_grey")
+  scw_brand_main  =
+    nhs_cols(
+      'scw_dark_blue', 'nhs_aqua_blue', 'nhs_dark_blue', 'nhs_white'
+    ),
+
+  scw_brand_all  =
+    nhs_cols(
+      'scw_dark_blue', 'nhs_aqua_blue', 'nhs_dark_blue', 'nhs_white',
+      'nhs_purple', 'nhs_light_green', 'nhs_aqua_green', 'nhs_mid_grey',
+      'nhs_pale_grey'
+    ),
+
+  seq =
+    c(
+      '#005eb8', '#1667b5', '#2270b2', '#2d79b1', '#3681b0', '#4089b1',
+      '#4a91b2', '#5399b3', '#5ea1b5', '#68a9b8', '#73b0bb', '#7fb7bf',
+      '#8abfc3', '#97c6c8', '#a3cdcd', '#b0d3d3', '#bedad9', '#cbe0e0',
+      '#dae7e7', '#e8edee'
+    ),
+
+  BuGn =
+    c(
+      '#005eb8', '#5e7fc6', '#90a2d4', '#bdc7e1', '#e8edee',
+      '#bddbd8', '#90c9c3', '#5eb7ae', '#00a499'
+    ),
+
+  BuYlRd =
+    c(
+      '#005eb8', '#3e87b0', '#6eacba', '#a6cecf', '#e8edee',
+      '#f8c75f', '#efa040', '#e3764a', '#d1476a'
+      ),
+
+  BuRd =
+    c(
+      '#005eb8', '#5e7fc6', '#90a2d4', '#bdc7e1', '#e8edee',
+      '#e8c6cb', '#e49ea9', '#dc7589', '#d1476a'
+    ),
+
+  qual3 =
+    c('#005eb8', '#00a499', '#ae2573'),
+
+  qual5 =
+    c('#005eb8', '#257cc5', '#00a499', '#f2953a', '#d1476a'),
+
+  qual7 =
+    c(
+      '#005eb8', '#1e75ae', '#1f8ca4', '#00a499',
+      '#f8ae28', '#e97c4a', '#d1476a'
+    )
 )
-
-
 
 #' Return function to interpolate an SCW colour palette
 #'
@@ -60,7 +103,7 @@ scw_palettes <- list(
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
 #' @importFrom grDevices colorRampPalette
-scw_palette <- function(palette = "scw", reverse = FALSE, ...) {
+scw_palette <- function(palette = 'scw', reverse = FALSE, ...) {
   pal <- scw_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)
