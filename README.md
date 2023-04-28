@@ -53,17 +53,9 @@ There are a selection of colour palettes to choose from, depending on the purpos
 
 #### Qualitative
 
-**`qual3`**
+**`qual`**
 
-![Qualitative colour palette (3 colours)](/images/qual3.png)
-
-**`qual5`**
-
-![Qualitative colour palette (5 colours)](/images/qual5.png)
-
-**`qual7`**
-
-![Qualitative colour palette (7 colours)](/images/qual7.png)
+![Qualitative colour palette](/images/qual.png)
 
 ## To-Do List
 
