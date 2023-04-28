@@ -2,6 +2,8 @@
 
 export(add_commas)
 export(finalise_plot)
+export(get_images)
+export(save_images)
 export(scale_colour_scw)
 export(scale_fill_scw)
 export(scw_theme)
