@@ -6,25 +6,16 @@
 #' @export
 #'
 #' @examples
-get_images<-function(){
+get_images <- function(){
 
-  temp = list.files(path=system.file("Brand_Images",package="scwplot"),full.names = TRUE) ##read all files in package
+  temp = list.files(path = system.file("Brand_Images", package="scwplot"), full.names = TRUE) ##read all files in package
 
+  lapply(temp, fp <- function(x){ system.file("Brand_Images", paste0(x), package="scwplot") })
 
-  lapply(temp, fp<-function(x){ system.file("Brand_Images",paste0(x),package="scwplot") })
+  df <- dplyr::tibble(index = c(1:length(temp)), Image = temp, Image_File_Path = paste0("\"", temp, "\"" ))
 
-
-  df <- dplyr::tibble(index= c(1:length(temp))
-                      ,Image = temp
-
-                      ,
-                      Image_File_Path = paste0("\"",temp,"\"" ))
-
-
-
-
-  SCW_BI<- df %>%
-    gt::gt() %>%
+  img_table <- df |>
+    gt::gt() |>
     gt::text_transform(
       locations = gt::cells_body(c(Image)),
       fn = function(Image) {
@@ -33,10 +24,6 @@ get_images<-function(){
       }
     )
 
-
-
-  print(SCW_BI)
-
-
+  print(img_table)
 
 }
