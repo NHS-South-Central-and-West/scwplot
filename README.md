@@ -37,6 +37,10 @@ There are a selection of colour palettes to choose from, depending on the purpos
 
 ![Sequential colour palette](/images/seq.png)
 
+**`blue_mono`**
+
+![Blue monochrome colour palette](/images/blue_mono.png)
+
 #### Diverging
 
 **`BuGn`**
