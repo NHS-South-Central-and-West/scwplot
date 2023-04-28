@@ -7,5 +7,6 @@
 get_images()
 }
 \description{
-View images and icons saved within the package and the relevant file paths to utilise them.
+View images and icons saved within the package and the relevant file paths
+to utilise them.
 }
