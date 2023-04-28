@@ -65,6 +65,14 @@ scw_palettes <- list(
       '#dae7e7', '#e8edee'
     ),
 
+  blue_mono =
+    c(
+      '#1c355e', '#1c3d70', '#1c4680', '#1d4e90', '#23579f', '#2c60ab',
+      '#386ab5', '#4573be', '#537cc5', '#6186cb', '#6f90d0', '#7d9ad5',
+      '#8ba4d9', '#98aedd', '#a6b8e0', '#b3c2e4', '#c1cde6', '#ced7e9',
+      '#dbe2ec', '#e8edee'
+    ),
+
   BuGn =
     c(
       '#005eb8', '#5e7fc6', '#90a2d4', '#bdc7e1', '#e8edee',
@@ -83,16 +91,9 @@ scw_palettes <- list(
       '#e8c6cb', '#e49ea9', '#dc7589', '#d1476a'
     ),
 
-  qual3 =
-    c('#005eb8', '#00a499', '#ae2573'),
-
-  qual5 =
-    c('#005eb8', '#257cc5', '#00a499', '#f2953a', '#d1476a'),
-
-  qual7 =
+  qual =
     c(
-      '#005eb8', '#1e75ae', '#1f8ca4', '#00a499',
-      '#f8ae28', '#e97c4a', '#d1476a'
+      '#005eb8','#BD2F5A', '#FFB81C', '#1C355E', '#46A39D', '#8A9DAB'
     )
 )
 
