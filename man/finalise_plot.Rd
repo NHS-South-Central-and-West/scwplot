@@ -38,11 +38,12 @@ bottom right and save it to your specified location.
 }
 \examples{
 \dontrun{
-finalise_plot(plot_name = myplot,
-source = "The source for my data",
-save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
-width_pixels = 640,
-height_pixels = 450
+finalise_plot(
+  plot_name = myplot,
+  source = "The source for my data",
+  save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
+  width_pixels = 640,
+  height_pixels = 450
 )
 }
 }
