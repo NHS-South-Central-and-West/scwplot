@@ -13,22 +13,28 @@ finalise_plot(
 )
 }
 \arguments{
-\item{plot_name}{The variable name of the plot you have created that you want to format and save}
+\item{plot_name}{The variable name of the plot you have created that you want
+to format and save}
 
-\item{source_name}{The text you want to come after the text 'Source:' in the bottom left hand side of your side}
+\item{source_name}{The text you want to come after the text 'Source:' in the
+bottom left hand side of your side}
 
 \item{save_filepath}{Exact filepath that you want the plot to be saved to}
 
-\item{width_pixels}{Width in pixels that you want to save your chart to - defaults to 640}
+\item{width_pixels}{Width in pixels that you want to save your chart to -
+defaults to 640}
 
-\item{height_pixels}{Height in pixels that you want to save your chart to - defaults to 450}
+\item{height_pixels}{Height in pixels that you want to save your chart to -
+defaults to 450}
 }
 \value{
 (Invisibly) an updated ggplot object.
 }
 \description{
-Running this function will save your plot with the correct guidelines for publication for a SCW graphic.
-It will left align your title, subtitle and source, add the NHS logo at the bottom right and save it to your specified location.
+Running this function will save your plot with the correct guidelines for
+publication for a SCW graphic.
+It will left align your title, subtitle and source, add the NHS logo at the
+bottom right and save it to your specified location.
 }
 \examples{
 \dontrun{
