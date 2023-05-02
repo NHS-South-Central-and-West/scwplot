@@ -4,12 +4,13 @@
 \alias{scale_fill_scw}
 \title{Fill scale constructor for SCW colours}
 \usage{
-scale_fill_scw(palette = "scw", discrete = TRUE, reverse = FALSE, ...)
+scale_fill_scw(palette = "qual", discrete = TRUE, reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in SCW theme}
 
-\item{discrete}{Boolean indicating whether colour aesthetic is discrete or not}
+\item{discrete}{Boolean indicating whether colour aesthetic is discrete or
+not}
 
 \item{reverse}{Boolean indicating whether the palette should be reversed}
 

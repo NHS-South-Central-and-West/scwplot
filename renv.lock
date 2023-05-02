@@ -186,6 +186,13 @@
       ],
       "Hash": "9a052fbcbe97a98ceb18dbfd30ebd96e"
     },
+    "brew": {
+      "Package": "brew",
+      "Version": "1.0-8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "d69a786e85775b126bddbee185ae6084"
+    },
     "brio": {
       "Package": "brio",
       "Version": "1.1.3",
@@ -1207,6 +1214,31 @@
         "yaml"
       ],
       "Hash": "493df4ae51e2e984952ea4d5c75786a3"
+    },
+    "roxygen2": {
+      "Package": "roxygen2",
+      "Version": "7.2.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R6",
+        "brew",
+        "cli",
+        "commonmark",
+        "cpp11",
+        "desc",
+        "knitr",
+        "methods",
+        "pkgload",
+        "purrr",
+        "rlang",
+        "stringi",
+        "stringr",
+        "utils",
+        "withr",
+        "xml2"
+      ],
+      "Hash": "7b153c746193b143c14baa072bae4e27"
     },
     "rprojroot": {
       "Package": "rprojroot",

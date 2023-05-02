@@ -4,5 +4,5 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^.github
+^images
 ^codecov\.yml$
-^\.github$
