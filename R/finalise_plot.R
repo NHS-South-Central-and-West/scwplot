@@ -1,6 +1,6 @@
 save_plot <- function(plot_grid, width, height, save_filepath) {
   grid::grid.draw(plot_grid)
-  #save it
+  # save it
   ggplot2::ggsave(
     filename = save_filepath,
     plot = plot_grid,
@@ -10,7 +10,7 @@ save_plot <- function(plot_grid, width, height, save_filepath) {
   )
 }
 
-#Left align text
+# Left align text
 left_align <- function(plot_name, pieces) {
   grob <- ggplot2::ggplotGrob(plot_name)
   grob$layout$l[grob$layout$name %in% pieces] <- 2
@@ -18,7 +18,7 @@ left_align <- function(plot_name, pieces) {
 }
 
 create_footer <- function(source_name) {
-  #Make the footer
+  # Make the footer
   footer <-
     grid::grobTree(
       grid::textGrob(
@@ -33,7 +33,6 @@ create_footer <- function(source_name) {
       )
     )
   return(footer)
-
 }
 
 
@@ -58,11 +57,12 @@ create_footer <- function(source_name) {
 #' @keywords finalise_plot
 #' @examples
 #' \dontrun{
-#' finalise_plot(plot_name = myplot,
-#' source = "The source for my data",
-#' save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
-#' width_pixels = 640,
-#' height_pixels = 450
+#' finalise_plot(
+#'   plot_name = myplot,
+#'   source = "The source for my data",
+#'   save_filepath = "filename_that_my_plot_should_be_saved_to-nc.png",
+#'   width_pixels = 640,
+#'   height_pixels = 450
 #' )
 #' }
 #' @export
@@ -70,10 +70,9 @@ finalise_plot <- function(
     plot_name, source_name,
     save_filepath = file.path(Sys.getenv("TMPDIR"), "tmp-nc.png"),
     width_pixels = 640, height_pixels = 450) {
-
   footer <- create_footer(source_name)
 
-  #Draw your left-aligned grid
+  # Draw your left-aligned grid
   plot_left_aligned <-
     left_align(plot_name, c("subtitle", "title", "caption", "guide-box"))
   plot_grid <- ggpubr::ggarrange(
@@ -82,7 +81,7 @@ finalise_plot <- function(
     ncol = 1,
     nrow = 2,
     heights = c(1, 0.045 / (height_pixels /
-                              450))
+      450))
   )
   save_plot(plot_grid, width_pixels, height_pixels, save_filepath)
   ## Return (invisibly) a copy of the graph. Can be assigned to a

@@ -20,7 +20,6 @@ nhs_colours <- c(
   nhs_orange        = "#ED8B00",
   nhs_warm_yellow   = "#FFB81C",
   nhs_yellow        = "#FAE100",
-
   scw_dark_blue     = "#1c355e"
 )
 
@@ -31,32 +30,29 @@ nhs_colours <- c(
 nhs_cols <- function(...) {
   cols <- c(...)
 
-  if (is.null(cols))
+  if (is.null(cols)) {
     return(nhs_colours)
+  }
 
   nhs_colours[cols]
 }
 
 scw_palettes <- list(
-
   nhs =
     nhs_cols(
       "nhs_dark_blue", "nhs_blue", "nhs_light_blue", "nhs_dark_green",
       "nhs_green", "nhs_pink", "nhs_yellow"
     ),
-
-  scw_brand_main  =
+  scw_brand_main =
     nhs_cols(
       "scw_dark_blue", "nhs_aqua_blue", "nhs_dark_blue", "nhs_white"
     ),
-
-  scw_brand_all  =
+  scw_brand_all =
     nhs_cols(
       "scw_dark_blue", "nhs_aqua_blue", "nhs_dark_blue", "nhs_white",
       "nhs_purple", "nhs_light_green", "nhs_aqua_green", "nhs_mid_grey",
       "nhs_pale_grey"
     ),
-
   seq =
     c(
       "#005eb8", "#1667b5", "#2270b2", "#2d79b1", "#3681b0", "#4089b1",
@@ -64,7 +60,6 @@ scw_palettes <- list(
       "#8abfc3", "#97c6c8", "#a3cdcd", "#b0d3d3", "#bedad9", "#cbe0e0",
       "#dae7e7", "#e8edee"
     ),
-
   blue_mono =
     c(
       "#1c355e", "#1c3d70", "#1c4680", "#1d4e90", "#23579f", "#2c60ab",
@@ -72,25 +67,21 @@ scw_palettes <- list(
       "#8ba4d9", "#98aedd", "#a6b8e0", "#b3c2e4", "#c1cde6", "#ced7e9",
       "#dbe2ec", "#e8edee"
     ),
-
   BuGn =
     c(
       "#005eb8", "#5e7fc6", "#90a2d4", "#bdc7e1", "#e8edee",
       "#bddbd8", "#90c9c3", "#5eb7ae", "#00a499"
     ),
-
   BuYlRd =
     c(
       "#005eb8", "#3e87b0", "#6eacba", "#a6cecf", "#e8edee",
       "#f8c75f", "#efa040", "#e3764a", "#d1476a"
-      ),
-
+    ),
   BuRd =
     c(
       "#005eb8", "#5e7fc6", "#90a2d4", "#bdc7e1", "#e8edee",
       "#e8c6cb", "#e49ea9", "#dc7589", "#d1476a"
     ),
-
   qual =
     c(
       "#005eb8", "#BD2F5A", "#FFB81C", "#1C355E", "#46A39D", "#8A9DAB"
@@ -104,7 +95,7 @@ scw_palettes <- list(
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
 #' @importFrom grDevices colorRampPalette
-scw_palette <- function(palette = 'scw', reverse = FALSE, ...) {
+scw_palette <- function(palette = "scw", reverse = FALSE, ...) {
   pal <- scw_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)

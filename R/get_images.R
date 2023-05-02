@@ -9,7 +9,7 @@ get_images <- function() {
   temp <- list.files(
     path = system.file("images", package = "scwplot"),
     full.names = TRUE
-    )
+  )
 
   lapply(temp, fp <- function(x) {
     system.file("images", paste0(x), package = "scwplot")
@@ -19,12 +19,12 @@ get_images <- function() {
     index = c(1:length(temp)),
     Image = temp,
     Image_File_Path = paste0("\"", temp, "\"")
-    )
+  )
 
   img_table <- df |>
     gt::gt() |>
     gt::text_transform(
-      locations = gt::cells_body(c('Image')),
+      locations = gt::cells_body(c("Image")),
       fn = function(Image) {
         lapply(Image, gt::local_image)
       }
