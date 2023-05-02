@@ -2,9 +2,7 @@
 
 <!-- badges: start -->
 [![check-standard](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml)
-[![lint](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/lint.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/lint.yaml)
-[![document](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/document.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/document.yaml)
-[![style](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/style.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/style.yaml)
+[![test-coverage](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/test-coverage.yaml)
 <!-- badges: end -->
 
 
