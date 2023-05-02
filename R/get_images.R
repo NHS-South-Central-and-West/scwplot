@@ -11,22 +11,22 @@ get_images <- function() {
     full.names = TRUE
   )
 
-  lapply(temp, fp <- function(x) {
+  lapply(temp, function(x) {
     system.file("images", paste0(x), package = "scwplot")
   })
 
   df <- dplyr::tibble(
-    index = c(1:length(temp)),
-    Image = temp,
-    Image_File_Path = paste0("\"", temp, "\"")
+    index = c(seq_along(temp)),
+    image = temp,
+    image_path = paste0("\"", temp, "\"")
   )
 
   img_table <- df |>
     gt::gt() |>
     gt::text_transform(
-      locations = gt::cells_body(c("Image")),
-      fn = function(Image) {
-        lapply(Image, gt::local_image)
+      locations = gt::cells_body(c("image")),
+      fn = function(img) {
+        lapply(img, gt::local_image)
       }
     )
 
