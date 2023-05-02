@@ -1221,7 +1221,6 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
-        "R",
         "R6",
         "brew",
         "cli",
