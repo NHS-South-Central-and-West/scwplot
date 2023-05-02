@@ -1,5 +1,13 @@
 # scwplot
 
+<!-- badges: start -->
+[![check-standard](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml)
+[![lint](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/lint.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/lint.yaml)
+[![document](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/document.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/document.yaml)
+[![style](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/style.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/style.yaml)
+<!-- badges: end -->
+
+
 The {scwplot} package provides functions for applying consistent SCW-branded aesthetics to ggplot visualisations in R, as well as additional functionality that produces clean plots and makes plotting in R easier.
 
 ## Installation
