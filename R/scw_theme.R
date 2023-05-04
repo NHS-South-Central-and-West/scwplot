@@ -21,7 +21,6 @@
 #'
 theme_scw <- function(base_size = 15, base_family = "sans",
                       grid_y = TRUE, grid_x = FALSE) {
-
   # Use theme_minimal as basis for theme
   ggplot2::theme_minimal(
     base_size = base_size,
@@ -87,18 +86,22 @@ theme_scw <- function(base_size = 15, base_family = "sans",
 
       # Panel Elements
       panel.grid.major.x =
-        if(grid_x){
-          ggplot2::element_line(linewidth = 0.5,
-                                colour = "grey90",
-                                linetype = "dashed")
-          } else {
-            ggplot2::element_blank()
-          },
+        if (grid_x) {
+          ggplot2::element_line(
+            linewidth = 0.5,
+            colour = "grey90",
+            linetype = "dashed"
+          )
+        } else {
+          ggplot2::element_blank()
+        },
       panel.grid.major.y =
-        if(grid_y){
-          ggplot2::element_line(linewidth = 0.5,
-                                colour = "grey90",
-                                linetype = "dashed")
+        if (grid_y) {
+          ggplot2::element_line(
+            linewidth = 0.5,
+            colour = "grey90",
+            linetype = "dashed"
+          )
         } else {
           ggplot2::element_blank()
         },
