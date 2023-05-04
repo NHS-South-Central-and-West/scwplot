@@ -1,66 +1,83 @@
 #' Add SCW theme to ggplot chart
 #'
 #' This function allows you to add the SCW theme to your ggplot graphics.
+#' @param base_size base font size, given in pts
+#' @param base_family base font family
+#'
 #' @keywords ggplot theme
-#' @importFrom ggplot2 margin unit
+#'
+#' @importFrom ggplot2 %+replace%
+#'
 #' @export
+#'
 #' @examples
-#' \dontrun{
-#' line <- ggplot(line_df, aes(x = year, y = lifeExp)) +
-#'   geom_line(colour = "#007f7f", size = 1) +
-#'   geom_hline(yintercept = 0, size = 1, colour = "#333333") +
-#'   scw_theme()
-#' }
-scw_theme <-
-  function() {
+#' library(ggplot2)
+#'
+#' ggplot(mpg, aes(displ, cty)) +
+#'   geom_point() +
+#'   theme_scw()
+#'
+theme_scw <- function(base_size = 15, base_family = "sans") {
+
+  # Use theme_minimal as basis for theme
+  ggplot2::theme_minimal(
+    base_size = base_size,
+    base_family = base_family
+  ) %+replace%
     ggplot2::theme(
-      plot.title = ggplot2::element_text(
-        family = "sans", size = 14,
-        margin = ggplot2::margin(4, 0, 4, 0),
-        face = "bold",
-        color = "#000000"
-      ),
-      plot.subtitle = ggplot2::element_text(
-        family = "sans", size = 12,
-        margin = ggplot2::margin(4, 0, 8, 0)
-      ),
-      plot.caption = ggplot2::element_text(
-        family = "sans", size = 12,
-        color = "#768692", hjust = 0
-      ),
+
+      # Plot Elements
+      plot.background = ggplot2::element_rect(fill = "white", colour = "white"),
+      plot.margin = ggplot2::margin(t = 25, b = 25, l = 25, r = 25),
+
+      # Text Elements
+      plot.title = ggplot2::element_text(colour = "grey10",
+                                         size = ggplot2::rel(1.6),
+                                         face = "bold",
+                                         hjust = 0),
+      plot.subtitle = ggplot2::element_text(colour = "grey40",
+                                            size = ggplot2::rel(1.2),
+                                            hjust = 0,
+                                            lineheight = 1.4,
+                                            margin = ggplot2::margin(t = 15,
+                                                                     b = 15)),
+      plot.caption = ggplot2::element_text(colour = "grey60",
+                                           size = ggplot2::rel(0.9),
+                                           hjust = 0,
+                                           margin = ggplot2::margin(t = 25)),
+
+      # Legend Elements
       legend.position = "top",
-      legend.text.align = 0,
-      legend.background = ggplot2::element_blank(),
       legend.title = ggplot2::element_blank(),
+      legend.text = ggplot2::element_text(colour = "grey20",
+                                          size = ggplot2::rel(1.2)),
+      legend.key.width = ggplot2::unit(2, "cm"),
       legend.key = ggplot2::element_blank(),
-      legend.text = ggplot2::element_text(
-        family = "sans", size = 12, color = "#000000"
-      ),
-      legend.justification = "left",
-      legend.margin = margin(t = -0.06, r = 0, b = 0, l = 0, unit = "cm"),
-      axis.title = ggplot2::element_text(
-        family = "sans", size = 12, color = "#000000"
-      ),
-      axis.title.y = ggplot2::element_text(
-        margin = margin(t = 0, r = 10, b = 0, l = 0)
-      ),
-      axis.text = ggplot2::element_text(
-        family = "sans", size = 12, color = "#000000"
-      ),
-      axis.text.x = ggplot2::element_text(
-        margin = ggplot2::margin(5, 0, 10, 0)
-      ),
-      axis.text.y = ggplot2::element_text(
-        margin = ggplot2::margin(5, 0, 10, 0)
-      ),
-      axis.ticks.y = ggplot2::element_blank(),
-      axis.line = ggplot2::element_blank(),
-      panel.grid.minor = ggplot2::element_blank(),
-      panel.grid.major.y = ggplot2::element_line(color = "#CBCBCB", size = 0.2),
+
+      # Axis Elements
+      axis.title.x = ggplot2::element_text(colour = "grey20",
+                                         size = ggplot2::rel(1.2),
+                                         vjust = -2.5),
+      axis.title.y = ggplot2::element_text(colour = "grey20",
+                                           size = ggplot2::rel(1.2),
+                                           vjust = 5,
+                                           angle = 90),
+      axis.text = ggplot2::element_text(colour = "grey20",
+                                        size = ggplot2::rel(1)),
+      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5, b = 10)),
+      axis.line = ggplot2::element_line(linewidth = 1),
+
+      # Panel Elements
       panel.grid.major.x = ggplot2::element_blank(),
-      panel.background = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = "white"),
-      strip.text = ggplot2::element_text(size = 12, hjust = 0),
-      plot.margin = unit(c(0.8, 0.8, 0, 0.2), "cm")
+      panel.grid.minor.x = ggplot2::element_blank(),
+      panel.grid.major.y = ggplot2::element_line(linewidth = 0.5,
+                                                 colour = "grey90",
+                                                 linetype = "dashed"),
+      panel.grid.minor.y = ggplot2::element_blank(),
+
+      # Facet Elements
+      strip.text = ggplot2::element_text(size = ggplot2::rel(1)),
+
+      complete = TRUE
     )
-  }
+}
