@@ -1,8 +1,10 @@
-#' Add SCW theme to ggplot chart
+#' Add SCW theme to ggplot figures
 #'
 #' This function allows you to add the SCW theme to your ggplot graphics.
-#' @param base_size base font size, given in pts
-#' @param base_family base font family
+#' @param base_size base font size, given in pts (default = 15)
+#' @param base_family base font family (default = "sans")
+#' @param grid_y show major panel grid lines on y-axis (default = TRUE)
+#' @param grid_x show major panel grid lines on x-axis (default = FALSE)
 #'
 #' @keywords ggplot theme
 #'
@@ -17,7 +19,8 @@
 #'   geom_point() +
 #'   theme_scw()
 #'
-theme_scw <- function(base_size = 15, base_family = "sans") {
+theme_scw <- function(base_size = 15, base_family = "sans",
+                      grid_y = TRUE, grid_x = FALSE) {
 
   # Use theme_minimal as basis for theme
   ggplot2::theme_minimal(
@@ -65,14 +68,25 @@ theme_scw <- function(base_size = 15, base_family = "sans") {
       axis.text = ggplot2::element_text(colour = "grey20",
                                         size = ggplot2::rel(1)),
       axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5, b = 10)),
-      axis.line = ggplot2::element_line(linewidth = 1),
 
       # Panel Elements
-      panel.grid.major.x = ggplot2::element_blank(),
+      panel.grid.major.x =
+        if(grid_x){
+          ggplot2::element_line(linewidth = 0.5,
+                                colour = "grey90",
+                                linetype = "dashed")
+          } else {
+            ggplot2::element_blank()
+          },
+      panel.grid.major.y =
+        if(grid_y){
+          ggplot2::element_line(linewidth = 0.5,
+                                colour = "grey90",
+                                linetype = "dashed")
+        } else {
+          ggplot2::element_blank()
+        },
       panel.grid.minor.x = ggplot2::element_blank(),
-      panel.grid.major.y = ggplot2::element_line(linewidth = 0.5,
-                                                 colour = "grey90",
-                                                 linetype = "dashed"),
       panel.grid.minor.y = ggplot2::element_blank(),
 
       # Facet Elements
