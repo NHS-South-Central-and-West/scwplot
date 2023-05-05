@@ -67,20 +67,6 @@ There are a selection of colour palettes to choose from, depending on the purpos
 
 ![Qualitative colour palette](/images/qual.png)
 
-## To-Do List
-
-The package is currently in active development, and as such there are a number of developments that have already been planned:
-
-- [x] Migrate package from GitLab to GitHub
-- [x] Check package functions
-- [x] Submit issues
-- [x] Clean up package functions
-- [x] Clean up migration and set up GH Actions
-- [ ] Redevelop discrete/continuous/qualitative palettes so that they are more aesthetically pleasing, accessible, and follow good data visualisation principles
-- [ ] Put together full package documentation
-- [ ] Add testing for every function
-- [ ] Clean up codebase
-
 ## Acknowledgements
 
 This package takes a lot of inspiration from the NHS-R community's [{NHSRtheme}](https://github.com/nhs-r-community/NHSRtheme) package and BBC's [{bbplot}](https://github.com/bbc/bbplot) package.
