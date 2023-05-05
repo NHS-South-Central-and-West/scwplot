@@ -1,4 +1,4 @@
-# scwplot
+# scwplot <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
 [![check-standard](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml)
