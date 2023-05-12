@@ -36,8 +36,7 @@ The {scwplot} package provides functions for applying consistent SCW-branded aes
 
 # install.packages('devtools')
 
-devtools::install_github('NHS-South-Central-and-West/scwplot')
-
+devtools::install_github("NHS-South-Central-and-West/scwplot")
 ```
 
 If you haven't already installed {devtools}, you will also have to run the first line of code in the code chunk.
