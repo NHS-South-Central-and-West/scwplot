@@ -34,13 +34,34 @@
     <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/nhs_cols.html</loc>
   </url>
   <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/pal_diverging.html</loc>
+  </url>
+  <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/pal_qualitative.html</loc>
+  </url>
+  <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/pal_sequential.html</loc>
+  </url>
+  <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/palettes.html</loc>
+  </url>
+  <url>
     <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/save_images.html</loc>
   </url>
   <url>
     <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scale_colour_scw.html</loc>
   </url>
   <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scale_diverging.html</loc>
+  </url>
+  <url>
     <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scale_fill_scw.html</loc>
+  </url>
+  <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scale_qualitative.html</loc>
+  </url>
+  <url>
+    <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scale_sequential.html</loc>
   </url>
   <url>
     <loc>https://nhs-south-central-and-west.github.io/scwplot/reference/scw_palette.html</loc>
