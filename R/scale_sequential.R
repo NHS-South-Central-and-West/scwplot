@@ -79,7 +79,19 @@ scale_color_sequential <- scale_colour_sequential
 #' @rdname scale_sequential
 scale_fill_sequential <-
   function(palette = c("blue_mono", "blue_green"),
+           discrete = TRUE,
            alpha = 1, ...) {
     palette <- match.arg(palette)
-    discrete_scale("fill", "sequential", pal_sequential(palette, alpha), ...)
+    if (discrete) {
+      discrete_scale(
+        "fill", "sequential",
+        pal_sequential(palette, alpha), ...
+      )
+    } else {
+      ggplot2::scale_colour_gradientn(
+        "fill", "sequential",
+        palette = pal_sequential(palette, alpha),
+        colours = 256, ...
+      )
+    }
   }
