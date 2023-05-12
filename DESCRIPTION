@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre")),
     person("Brian", "Lau", , "brian.lau@nhs.net", role = c("aut"))
   )
-Description: Makes the creation of ggplot graphics in a SWCW style easier by 
+Description: Makes the creation of ggplot graphics in a SCW style easier by 
     providing functions for consistent themeing, use of colours, and dimensons.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -17,9 +17,13 @@ Imports:
     dplyr,
     ggplot2,
     ggpubr,
-    gt
+    gt,
+    scales
 Suggests: 
     covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://nhs-south-central-and-west.github.io/scwplot/
+Depends: 
+    R (>= 2.10)
+LazyData: true

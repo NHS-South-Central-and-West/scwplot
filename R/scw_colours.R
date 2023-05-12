@@ -95,7 +95,7 @@ scw_palettes <- list(
 #' @param ... Additional arguments to pass to colorRampPalette()
 #'
 #' @importFrom grDevices colorRampPalette
-scw_palette <- function(palette = "scw", reverse = FALSE, ...) {
+scw_palette <- function(palette = "seq", reverse = FALSE, ...) {
   pal <- scw_palettes[[palette]]
 
   if (reverse) pal <- rev(pal)

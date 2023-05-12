@@ -4,7 +4,7 @@
 \alias{scw_palette}
 \title{Return function to interpolate an SCW colour palette}
 \usage{
-scw_palette(palette = "scw", reverse = FALSE, ...)
+scw_palette(palette = "seq", reverse = FALSE, ...)
 }
 \arguments{
 \item{palette}{Character name of palette in scw_palettes}
