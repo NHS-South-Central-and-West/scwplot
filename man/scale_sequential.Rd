@@ -20,7 +20,12 @@ scale_color_sequential(
   ...
 )
 
-scale_fill_sequential(palette = c("blue_mono", "blue_green"), alpha = 1, ...)
+scale_fill_sequential(
+  palette = c("blue_mono", "blue_green"),
+  discrete = TRUE,
+  alpha = 1,
+  ...
+)
 }
 \arguments{
 \item{palette}{Palette type.
