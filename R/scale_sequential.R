@@ -13,13 +13,9 @@
 #'
 #' @export pal_sequential
 #'
-#' @importFrom grDevices col2rgb rgb
-#' @importFrom scales manual_pal
-#'
 #' @examples
-#' library("scales")
-#' show_col(pal_sequential("blue_mono")(9))
-#' show_col(pal_sequential("blue_green", alpha = 0.7)(9))
+#' scales::show_col(pal_sequential("blue_mono")(9))
+#' scales::show_col(pal_sequential("blue_green", alpha = 0.7)(9))
 pal_sequential <-
   function(palette = c("blue_mono", "blue_green"), alpha = 1) {
     palette <- match.arg(palette)
@@ -27,8 +23,8 @@ pal_sequential <-
     if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
 
     raw_cols <- scwplot::palettes$"sequential"[[palette]]
-    raw_cols_rgb <- col2rgb(raw_cols)
-    alpha_cols <- rgb(
+    raw_cols_rgb <- grDevices::col2rgb(raw_cols)
+    alpha_cols <- grDevices::rgb(
       raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
       alpha = alpha * 255L, names = names(raw_cols),
       maxColorValue = 255L
@@ -47,8 +43,6 @@ pal_sequential <-
 #'
 #' @export scale_colour_sequential
 #'
-#' @importFrom ggplot2 discrete_scale
-#'
 #' @rdname scale_sequential
 #'
 scale_colour_sequential <-
@@ -57,15 +51,15 @@ scale_colour_sequential <-
     palette <- match.arg(palette)
 
     if (discrete) {
-      discrete_scale(
+      ggplot2::discrete_scale(
         "colour", "sequential",
         pal_sequential(palette, alpha), ...
       )
     } else {
-      ggplot2::scale_colour_gradientn(
+      ggplot2::continuous_scale(
         "colour", "sequential",
-        palette = pal_sequential(palette, alpha),
-        colours = 256, ...
+        scales::gradient_n_pal(pal_sequential(palette, alpha)(9)),
+        na.value = "grey50", guide = "colourbar", ...
       )
     }
   }
@@ -75,23 +69,24 @@ scale_colour_sequential <-
 scale_color_sequential <- scale_colour_sequential
 
 #' @export scale_fill_sequential
-#' @importFrom ggplot2 discrete_scale
+#'
 #' @rdname scale_sequential
 scale_fill_sequential <-
   function(palette = c("blue_mono", "blue_green"),
            discrete = TRUE,
            alpha = 1, ...) {
     palette <- match.arg(palette)
+
     if (discrete) {
-      discrete_scale(
+      ggplot2::discrete_scale(
         "fill", "sequential",
         pal_sequential(palette, alpha), ...
       )
     } else {
-      ggplot2::scale_colour_gradientn(
+      ggplot2::continuous_scale(
         "fill", "sequential",
-        palette = pal_sequential(palette, alpha),
-        colours = 256, ...
+        scales::gradient_n_pal(pal_sequential(palette, alpha)(9)),
+        na.value = "grey50", guide = "colourbar", ...
       )
     }
   }

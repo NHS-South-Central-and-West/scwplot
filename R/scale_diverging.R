@@ -15,14 +15,10 @@
 #'
 #' @export pal_diverging
 #'
-#' @importFrom grDevices col2rgb rgb
-#' @importFrom scales manual_pal
-#'
 #' @examples
-#' library("scales")
-#' show_col(pal_diverging("blue_green")(9))
-#' show_col(pal_diverging("blue_yellow_red")(9))
-#' show_col(pal_diverging("blue_red", alpha = 0.7)(9))
+#' scales::show_col(pal_diverging("blue_green")(9))
+#' scales::show_col(pal_diverging("blue_yellow_red")(9))
+#' scales::show_col(pal_diverging("blue_red", alpha = 0.7)(9))
 pal_diverging <-
   function(palette = c(
              "blue_green",
@@ -35,14 +31,15 @@ pal_diverging <-
     if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
 
     raw_cols <- scwplot::palettes$"diverging"[[palette]]
-    raw_cols_rgb <- col2rgb(raw_cols)
-    alpha_cols <- rgb(
+    raw_cols_rgb <- grDevices::col2rgb(raw_cols)
+    alpha_cols <- grDevices::rgb(
       raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
       alpha = alpha * 255L, names = names(raw_cols),
       maxColorValue = 255L
     )
     scales::manual_pal(unname(alpha_cols))
   }
+
 
 #' SCW diverging Colour Palettes
 #'
@@ -55,8 +52,6 @@ pal_diverging <-
 #'
 #' @export scale_colour_diverging
 #'
-#' @importFrom ggplot2 discrete_scale
-#'
 #' @rdname scale_diverging
 #'
 scale_colour_diverging <-
@@ -65,16 +60,16 @@ scale_colour_diverging <-
     palette <- match.arg(palette)
 
     if (discrete) {
-      discrete_scale(
+      ggplot2::discrete_scale(
         "colour", "diverging",
         pal_diverging(palette, alpha), ...
       )
     } else {
-      ggplot2::scale_colour_gradientn(
+      ggplot2::continuous_scale(
         "colour", "diverging",
-        palette = pal_diverging(palette, alpha),
-        colours = 256, ...
-      )
+        scales::gradient_n_pal(pal_diverging(palette, alpha)(9)),
+        na.value = "grey50", guide = "colourbar", ...
+        )
     }
   }
 
@@ -83,11 +78,23 @@ scale_colour_diverging <-
 scale_color_diverging <- scale_colour_diverging
 
 #' @export scale_fill_diverging
-#' @importFrom ggplot2 discrete_scale
+#'
 #' @rdname scale_diverging
 scale_fill_diverging <-
   function(palette = c("blue_green", "blue_yellow_red", "blue_red"),
-           alpha = 1, ...) {
+           alpha = 1, discrete = TRUE, ...) {
     palette <- match.arg(palette)
-    discrete_scale("fill", "diverging", pal_diverging(palette, alpha), ...)
+
+    if (discrete) {
+      ggplot2::discrete_scale(
+        "fill", "diverging",
+        pal_diverging(palette, alpha), ...
+      )
+    } else {
+      ggplot2::continuous_scale(
+        "fill", "diverging",
+        scales::gradient_n_pal(pal_diverging(palette, alpha)(9)),
+        na.value = "grey50", guide = "colourbar", ...
+      )
+    }
   }
