@@ -23,6 +23,7 @@ scale_color_diverging(
 scale_fill_diverging(
   palette = c("blue_green", "blue_yellow_red", "blue_red"),
   alpha = 1,
+  discrete = TRUE,
   ...
 )
 }

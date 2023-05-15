@@ -19,6 +19,5 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 Return the SCW qualitative colour palettes.
 }
 \examples{
-library("scales")
-show_col(pal_qualitative("default")(5))
+scales::show_col(pal_qualitative("default")(5))
 }

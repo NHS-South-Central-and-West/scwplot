@@ -20,7 +20,6 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 Return the SCW sequential colour palettes.
 }
 \examples{
-library("scales")
-show_col(pal_sequential("blue_mono")(9))
-show_col(pal_sequential("blue_green", alpha = 0.7)(9))
+scales::show_col(pal_sequential("blue_mono")(9))
+scales::show_col(pal_sequential("blue_green", alpha = 0.7)(9))
 }
