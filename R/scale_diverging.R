@@ -69,7 +69,7 @@ scale_colour_diverging <-
         "colour", "diverging",
         scales::gradient_n_pal(pal_diverging(palette, alpha)(9)),
         na.value = "grey50", guide = "colourbar", ...
-        )
+      )
     }
   }
 

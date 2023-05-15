@@ -63,5 +63,6 @@ scale_fill_qualitative <-
     palette <- match.arg(palette)
     ggplot2::discrete_scale(
       "fill", "qualitative",
-      pal_qualitative(palette, alpha), ...)
+      pal_qualitative(palette, alpha), ...
+    )
   }
