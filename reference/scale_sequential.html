@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">scwplot</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9002</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,40 +43,34 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">scale_colour_sequential</span><span class="op">(</span></span>
-<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span>,</span>
-<span>  discrete <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  alpha <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  reverse <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  discrete <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">scale_color_sequential</span><span class="op">(</span></span>
-<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span>,</span>
-<span>  discrete <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  alpha <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  reverse <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  discrete <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">scale_fill_sequential</span><span class="op">(</span></span>
-<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span>,</span>
-<span>  discrete <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  <span class="va">...</span>,</span>
 <span>  alpha <span class="op">=</span> <span class="fl">1</span>,</span>
-<span>  <span class="va">...</span></span>
+<span>  reverse <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  discrete <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  palette <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue_mono"</span>, <span class="st">"blue_green"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>palette</dt>
-<dd><p>Palette type.
-Currently there are two sequential colour palettes available:
-<code>"blue_mono"</code> (a 9-colour blue monochromatic palette) and
-<code>"blue_green"</code> (a 9-colour blue-to-green sequential palette that starts
-with SCW Dark Blue).</p></dd>
-
-
-<dt>discrete</dt>
-<dd><p>data Whether data the palette is being applied to is discrete
-or continuous.</p></dd>
+    <dl><dt>...</dt>
+<dd><p>additional parameters for <code><a href="https://ggplot2.tidyverse.org/reference/discrete_scale.html" class="external-link">discrete_scale</a></code></p></dd>
 
 
 <dt>alpha</dt>
@@ -84,8 +78,21 @@ or continuous.</p></dd>
 See <code>alpha</code> in <code><a href="https://rdrr.io/r/grDevices/rgb.html" class="external-link">rgb</a></code> for details.</p></dd>
 
 
-<dt>...</dt>
-<dd><p>additional parameters for <code><a href="https://ggplot2.tidyverse.org/reference/discrete_scale.html" class="external-link">discrete_scale</a></code></p></dd>
+<dt>reverse</dt>
+<dd><p>The default, FALSE, generates the colour palette as defined,
+while TRUE generates the colour palette in reverse order.</p></dd>
+
+
+<dt>discrete</dt>
+<dd><p>data Whether data the palette is being applied to is discrete
+or continuous.</p></dd>
+
+
+<dt>palette</dt>
+<dd><p>Currently there are two sequential colour palettes available:
+<code>"blue_mono"</code> (a 9-colour blue monochromatic palette) and
+<code>"blue_green"</code> (a 9-colour blue-to-green sequential palette that starts
+with SCW Dark Blue).</p></dd>
 
 </dl></div>
 
