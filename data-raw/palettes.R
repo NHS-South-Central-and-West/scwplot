@@ -102,6 +102,7 @@ palettes$"diverging"$"blue_green" <- c(
   "NHS Aqua Green" = "#00a499"
 )
 
+
 palettes$"diverging"$"blue_yellow_red" <- c(
   "NHS Blue" = "#005eb8",
   "Curious Blue" = "#3e87b0",

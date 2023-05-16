@@ -13,7 +13,7 @@
 #' @export pal_qualitative
 #'
 #' @examples
-#' scales::show_col(pal_qualitative("default")(5))
+#' scales::show_col(pal_qualitative(palette = "default")(5))
 pal_qualitative <- function(palette = c("default"), alpha = 1) {
   palette <- match.arg(palette)
 

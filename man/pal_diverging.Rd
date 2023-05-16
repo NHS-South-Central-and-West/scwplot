@@ -25,7 +25,7 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 Return the SCW diverging colour palettes.
 }
 \examples{
-scales::show_col(pal_diverging("blue_green")(9))
-scales::show_col(pal_diverging("blue_yellow_red")(9))
-scales::show_col(pal_diverging("blue_red", alpha = 0.7)(9))
+scales::show_col(pal_diverging(palette = "blue_green")(9))
+scales::show_col(pal_diverging(palette =  "blue_yellow_red")(9))
+scales::show_col(pal_diverging(palette = "blue_red", alpha = 0.7)(9))
 }

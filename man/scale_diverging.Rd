@@ -4,7 +4,7 @@
 \alias{scale_colour_diverging}
 \alias{scale_color_diverging}
 \alias{scale_fill_diverging}
-\title{SCW diverging Colour Palettes}
+\title{SCW Diverging Colour Palettes}
 \usage{
 scale_colour_diverging(
   palette = c("blue_green", "blue_yellow_red", "blue_red"),

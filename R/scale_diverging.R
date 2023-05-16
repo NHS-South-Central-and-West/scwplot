@@ -16,9 +16,9 @@
 #' @export pal_diverging
 #'
 #' @examples
-#' scales::show_col(pal_diverging("blue_green")(9))
-#' scales::show_col(pal_diverging("blue_yellow_red")(9))
-#' scales::show_col(pal_diverging("blue_red", alpha = 0.7)(9))
+#' scales::show_col(pal_diverging(palette = "blue_green")(9))
+#' scales::show_col(pal_diverging(palette =  "blue_yellow_red")(9))
+#' scales::show_col(pal_diverging(palette = "blue_red", alpha = 0.7)(9))
 pal_diverging <-
   function(palette = c(
              "blue_green",
@@ -41,7 +41,7 @@ pal_diverging <-
   }
 
 
-#' SCW diverging Colour Palettes
+#' SCW Diverging Colour Palettes
 #'
 #' See \code{\link{pal_diverging}} for details.
 #'
