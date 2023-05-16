@@ -24,25 +24,25 @@
 pal_diverging <-
   function(palette = c("blue_green", "blue_yellow_red", "blue_red"),
            alpha = 1, reverse = FALSE) {
-  palette <- match.arg(palette)
+    palette <- match.arg(palette)
 
-  if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
+    if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
 
-  raw_cols <- if (reverse) {
-    rev(scwplot::palettes$"diverging"[[palette]])
-  } else {
-    scwplot::palettes$"diverging"[[palette]]
+    raw_cols <- if (reverse) {
+      rev(scwplot::palettes$"diverging"[[palette]])
+    } else {
+      scwplot::palettes$"diverging"[[palette]]
+    }
+
+    raw_cols_rgb <- grDevices::col2rgb(raw_cols)
+    alpha_cols <- grDevices::rgb(
+      raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
+      alpha = alpha * 255L, names = names(raw_cols),
+      maxColorValue = 255L
+    )
+
+    pal_ramp(unname(alpha_cols))
   }
-
-  raw_cols_rgb <- grDevices::col2rgb(raw_cols)
-  alpha_cols <- grDevices::rgb(
-    raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
-    alpha = alpha * 255L, names = names(raw_cols),
-    maxColorValue = 255L
-  )
-
-  pal_ramp(unname(alpha_cols))
-}
 
 #' SCW Diverging Colour Palettes
 #'
