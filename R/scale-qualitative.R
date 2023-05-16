@@ -12,20 +12,16 @@
 #'
 #' @export pal_qualitative
 #'
-#' @importFrom grDevices col2rgb rgb
-#' @importFrom scales manual_pal
-#'
 #' @examples
-#' library("scales")
-#' show_col(pal_qualitative("default")(5))
+#' scales::show_col(pal_qualitative(palette = "default")(5))
 pal_qualitative <- function(palette = c("default"), alpha = 1) {
   palette <- match.arg(palette)
 
   if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
 
   raw_cols <- scwplot::palettes$"qualitative"[[palette]]
-  raw_cols_rgb <- col2rgb(raw_cols)
-  alpha_cols <- rgb(
+  raw_cols_rgb <- grDevices::col2rgb(raw_cols)
+  alpha_cols <- grDevices::rgb(
     raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
     alpha = alpha * 255L, names = names(raw_cols),
     maxColorValue = 255L
@@ -43,14 +39,12 @@ pal_qualitative <- function(palette = c("default"), alpha = 1) {
 #'
 #' @export scale_colour_qualitative
 #'
-#' @importFrom ggplot2 discrete_scale
-#'
 #' @rdname scale_qualitative
 #'
 scale_colour_qualitative <-
   function(palette = c("default"), alpha = 1, ...) {
     palette <- match.arg(palette)
-    discrete_scale(
+    ggplot2::discrete_scale(
       "colour", "qualitative",
       pal_qualitative(palette, alpha), ...
     )
@@ -61,10 +55,14 @@ scale_colour_qualitative <-
 scale_color_qualitative <- scale_colour_qualitative
 
 #' @export scale_fill_qualitative
-#' @importFrom ggplot2 discrete_scale
+#'
 #' @rdname scale_qualitative
+#'
 scale_fill_qualitative <-
   function(palette = c("default"), alpha = 1, ...) {
     palette <- match.arg(palette)
-    discrete_scale("fill", "qualitative", pal_qualitative(palette, alpha), ...)
+    ggplot2::discrete_scale(
+      "fill", "qualitative",
+      pal_qualitative(palette, alpha), ...
+    )
   }
