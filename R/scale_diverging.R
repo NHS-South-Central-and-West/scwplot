@@ -17,7 +17,7 @@
 #'
 #' @examples
 #' scales::show_col(pal_diverging(palette = "blue_green")(9))
-#' scales::show_col(pal_diverging(palette =  "blue_yellow_red")(9))
+#' scales::show_col(pal_diverging(palette = "blue_yellow_red")(9))
 #' scales::show_col(pal_diverging(palette = "blue_red", alpha = 0.7)(9))
 pal_diverging <-
   function(palette = c(
