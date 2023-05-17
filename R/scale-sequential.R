@@ -44,7 +44,7 @@ pal_sequential <- function(
     maxColorValue = 255L
   )
 
-  pal_ramp(unname(alpha_cols))
+  scwplot::pal_ramp(unname(alpha_cols))
 }
 
 #' SCW Sequential Colour Palettes
