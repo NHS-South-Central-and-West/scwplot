@@ -19,10 +19,12 @@
 #'
 #' @examples
 #' scales::show_col(pal_diverging(palette = "blue_green")(9))
-#' scales::show_col(pal_diverging(palette = "blue_yellow_red", alpha = 0.7)(9))
+#' scales::show_col(pal_diverging(palette = "blue_yellow")(9))
+#' scales::show_col(pal_diverging(palette = "blue_red")(9))
+#' scales::show_col(pal_diverging(palette = "blue_yellow", alpha = 0.7)(9))
 #' scales::show_col(pal_diverging(palette = "blue_red", reverse = TRUE)(9))
 pal_diverging <-
-  function(palette = c("blue_green", "blue_yellow_red", "blue_red"),
+  function(palette = c("blue_green", "blue_yellow", "blue_red"),
            alpha = 1, reverse = FALSE) {
     palette <- match.arg(palette)
 
@@ -61,7 +63,7 @@ pal_diverging <-
 #'
 scale_colour_diverging <-
   function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
-           palette = c("blue_green", "blue_yellow_red", "blue_red")) {
+           palette = c("blue_green", "blue_yellow", "blue_red")) {
     palette <- match.arg(palette)
 
     if (discrete) {
@@ -88,7 +90,7 @@ scale_color_diverging <- scale_colour_diverging
 #' @rdname scale_diverging
 scale_fill_diverging <-
   function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
-           palette = c("blue_green", "blue_yellow_red", "blue_red")) {
+           palette = c("blue_green", "blue_yellow", "blue_red")) {
     palette <- match.arg(palette)
 
     if (discrete) {

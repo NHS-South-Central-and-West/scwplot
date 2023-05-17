@@ -11,7 +11,7 @@ scale_colour_sequential(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_mono", "blue_green")
+  palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")
 )
 
 scale_color_sequential(
@@ -19,7 +19,7 @@ scale_color_sequential(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_mono", "blue_green")
+  palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")
 )
 
 scale_fill_sequential(
@@ -27,7 +27,7 @@ scale_fill_sequential(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_mono", "blue_green")
+  palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")
 )
 }
 \arguments{
@@ -42,10 +42,12 @@ while TRUE generates the colour palette in reverse order.}
 \item{discrete}{data Whether data the palette is being applied to is discrete
 or continuous.}
 
-\item{palette}{Currently there are two sequential colour palettes available:
-\code{"blue_mono"} (a 9-colour blue monochromatic palette) and
-\code{"blue_green"} (a 9-colour blue-to-green sequential palette that starts
-with SCW Dark Blue).}
+\item{palette}{Currently there are four sequential colour palettes available:
+\code{"blues"} (a 9-colour single-hue NHS Blue palette), \code{"dark_blues"}
+(a 9-colour single-hue SCW Dark Blue palette), \code{"blue_grey"} (a 9-colour
+multi-hue palette that uses SCW Dark Blue and NHS Pale Grey), and
+\code{"blue_green_yellow"} (a 9-colour multi-hue palette that is generated
+using NHS Blue, NHS Aqua Green, and NHS Warm Yellow).}
 }
 \description{
 See \code{\link{pal_sequential}} for details.

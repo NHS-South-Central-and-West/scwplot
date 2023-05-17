@@ -11,7 +11,7 @@ scale_colour_diverging(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_green", "blue_yellow_red", "blue_red")
+  palette = c("blue_green", "blue_yellow", "blue_red")
 )
 
 scale_color_diverging(
@@ -19,7 +19,7 @@ scale_color_diverging(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_green", "blue_yellow_red", "blue_red")
+  palette = c("blue_green", "blue_yellow", "blue_red")
 )
 
 scale_fill_diverging(
@@ -27,7 +27,7 @@ scale_fill_diverging(
   alpha = 1,
   reverse = TRUE,
   discrete = FALSE,
-  palette = c("blue_green", "blue_yellow_red", "blue_red")
+  palette = c("blue_green", "blue_yellow", "blue_red")
 )
 }
 \arguments{

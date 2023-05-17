@@ -5,16 +5,18 @@
 \title{Sequential Colour Palettes}
 \usage{
 pal_sequential(
-  palette = c("blue_mono", "blue_green"),
+  palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow"),
   alpha = 1,
   reverse = FALSE
 )
 }
 \arguments{
-\item{palette}{Currently there are two sequential colour palettes available:
-\code{"blue_mono"} (a 9-colour blue monochromatic palette) and
-\code{"blue_green"} (a 9-colour blue-to-green sequential palette that starts
-with SCW Dark Blue).}
+\item{palette}{Currently there are four sequential colour palettes available:
+\code{"blues"} (a 9-colour single-hue NHS Blue palette), \code{"dark_blues"}
+(a 9-colour single-hue SCW Dark Blue palette), \code{"blue_grey"} (a 9-colour
+multi-hue palette that uses SCW Dark Blue and NHS Pale Grey), and
+\code{"blue_green_yellow"} (a 9-colour multi-hue palette that is generated
+using NHS Blue, NHS Aqua Green, and NHS Warm Yellow).}
 
 \item{alpha}{Transparency level, a real number in (0, 1].
 See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
@@ -26,7 +28,10 @@ while TRUE generates the colour palette in reverse order.}
 Return the SCW sequential colour palettes.
 }
 \examples{
-scales::show_col(pal_sequential(palette = "blue_mono")(9))
+scales::show_col(pal_sequential(palette = "blues")(9))
+scales::show_col(pal_sequential(palette = "dark_blues")(9))
+scales::show_col(pal_sequential(palette = "blue_grey")(9))
+scales::show_col(pal_sequential(palette = "blue_green_yellow")(9))
 scales::show_col(pal_sequential(palette = "blue_green", alpha = 0.7)(9))
 scales::show_col(pal_sequential(palette = "blue_green", reverse = TRUE)(9))
 }

@@ -64,68 +64,93 @@ palettes$"scw"$"all" <- c(
 
 # Sequential Colour Palettes
 
-palettes$"sequential"$"blue_mono" <- c(
-  "SCW Dark Blue" = "#1c355e",
-  "Bahama Blue" = "#1d4a82",
-  "Endeavour" = "#25609e",
-  "Astral" = "#3878b2",
-  "Steel Blue" = "#5291c3",
-  "Seagull" = "#71a9d0",
-  "French Pass" = "#94c0db",
-  "Ziggurat" = "#bcd7e5",
-  "NHS Pale Grey" = "#e8edee"
+palettes$"sequential"$"blues" <- c(
+  "NHS Blue" = "#005EB8",
+  "Denim" = "#1873C5",
+  "Curious Blue" = "#3687CD",
+  "Picton Blue" = "#539BD4",
+  "Jordy Blue" = "#70AFDC",
+  "Cornflower" = "#8EC2E3",
+  "Tropical Blue" = "#AED5EC",
+  "Link Water" = "#CFE7F5",
+  "Alice Blue" = "#F2F9FF"
 )
 
-palettes$"sequential"$"blue_green" <- c(
-  "SCW Dark Blue" = "#1c355e",
-  "Bahama Blue" = "#1d4579",
-  "Endeavour" = "#20568c",
-  "Lochmara" = "#266999",
-  "Astral" = "#2e7da2",
-  "Scooter" = "#3791a8",
-  "Pelorous" = "#44a6ae",
-  "Fountain Blue" = "#56bab6",
-  "Downy" = "#70ccc4"
+palettes$"sequential"$"dark_blues" <- c(
+  "SCW Dark Blue" = "#1C355E",
+  "Bahama Blue" = "#1D4B84",
+  "Lochmara" = "#2763A0",
+  "Curious Blue" = "#3C7CB6",
+  "Picton Blue" = "#5796C8",
+  "Seagull" = "#78B0D7",
+  "Charlotte" = "#9CC9E4",
+  "Link Water" = "#C5E2F2",
+  "Alice Blue" = "#F2F9FF"
+)
+
+palettes$"sequential"$"blue_grey" <- c(
+  "SCW Dark Blue" = "#1C355E",
+  "Bahama Blue" = "#29497F",
+  "Mariner" = "#415E98",
+  "Chetwode Blue" = "#5B73AC",
+  "Wild Blue Yonder" = "#768ABE",
+  "Polo Blue" = "#91A2CF",
+  "Light Steel Blue" = "#ADBADD",
+  "Periwinkle" = "#CAD3E9",
+  "NHS Pale Grey" = "#E8EDEE"
+)
+
+palettes$"sequential"$"blue_green_yellow" <- c(
+  "NHS Blue" = "#005eb8",
+  "Lochmara" = "#2A75B1",
+  "Boston Blue" = "#448AB0",
+  "Shakespeare" = "#5E9EB2",
+  "Glacier" = "#7AB1B8",
+  "Shadow Green" = "#98C4C0",
+  "Jet Stream" = "#B8D6CB",
+  "Apple Green" = "#DBE7D7",
+  "Floral White" = "#FFF7E6"
 )
 
 # Diverging Colour Palettes
 
 palettes$"diverging"$"blue_green" <- c(
-  "NHS Blue" = "#005eb8",
-  "Havelock Blue" = "#5e7fc6",
-  "Portage" = "#90a2d4",
-  "Periwinkle" = "#bdc7e1",
-  "NHS Pale Grey" = "#e8edee",
-  "Iceberg" = "#bddbd8",
-  "Morning Glory" = "#90c9c3",
-  "Tradewind" = "#5eb7ae",
-  "NHS Aqua Green" = "#00a499"
+  "NHS Blue" = "#005EB8",
+  "Havelock Blue" = "#5E7FC5",
+  "Polo Blue" = "#90A2D1",
+  "Periwinkle" = "#BDC7E0",
+  "NHS Pale Grey" = "#E8EDEE",
+  "Iceberg" = "#BDDBD8",
+  "Morning Glory" = "#90C9C3",
+  "Puerto Rico" = "#5EB7AE",
+  "NHS Aqua Green" = "#00A499"
 )
 
 
-palettes$"diverging"$"blue_yellow_red" <- c(
-  "NHS Blue" = "#005eb8",
-  "Curious Blue" = "#3e87b0",
-  "Glacier" = "#6eacba",
-  "Sinbad" = "#a6cecf",
-  "NHS Pale Grey" = "#e8edee",
-  "Kournikova" = "#f8c75f",
-  "Sea Buckthorn" = "#efa040",
-  "Jaffa" = "#e3764a",
-  "Cabaret" = "#d1476a"
+palettes$"diverging"$"blue_yellow" <- c(
+  "NHS Blue" = "#005EB8",
+  "Pelorous" = "#3088C5",
+  "Picton Blue" = "#67B0D3",
+  "French Pass" = "#A4D2E1",
+  "NHS Pale Grey" = "#E8EDEE",
+  "Splash" = "#F2DF9B",
+  "Energy Yellow" = "#F6D262",
+  "Sunglow" = "#FBC439",
+  "NHS Warm Yellow" = "#FFB81C"
 )
 
 palettes$"diverging"$"blue_red" <- c(
-  "NHS Blue" = "#005eb8",
-  "Havelock Blue" = "#5e7fc6",
-  "Portage" = "#90a2d4",
-  "Periwinkle" = "#bdc7e1",
-  "NHS Pale Grey" = "#e8edee",
-  "Vanilla Ice" = "#e8c6cb",
-  "Kobi" = "#e49ea9",
-  "Pale Violet Red" = "#dc7589",
-  "Cabaret" = "#d1476a"
+  "NHS Blue" = "#005EB8",
+  "Havelock Blue" = "#5280CC",
+  "Portage" = "#89A3DA",
+  "Periwinkle" = "#BAC7E5",
+  "NHS Pale Grey" = "#E8EDEE",
+  "Melanie" = "#E4BBC1",
+  "Petite Orchid" = "#DB8996",
+  "Cabaret" = "#CE5369",
+  "Venetian Red" = "#B8002F"
 )
+
 
 # Qualitative Colour Palettes
 
@@ -137,5 +162,25 @@ palettes$"qualitative"$"default" <- c(
   "Keppel" = "#46A39D",
   "Bali Hai" = "#8A9DAB"
 )
+
+palettes$"qualitative"$"nhs" <- c(
+  "NHS Blue" = "#005EB8",
+  "NHS Warm Yellow" = "#FFB81C",
+  "NHS Pink" = "#AE2573",
+  "Dark Cyan" = "#00978D",
+  "NHS Purple" = "#330072",
+  "NHS Light Blue" = "#41B6E6"
+)
+
+palettes$"qualitative"$"scw" <- c(
+  "SCW Dark Blue" = "#1C355E",
+  "NHS Warm Yellow" = "#FFB81C",
+  "NHS Dark Red" = "#8A1538",
+  "NHS Aqua Blue" = "#00A9CE",
+  "NHS Pink" = "#AE2573",
+  "NHS Green" = "#009639",
+  "NHS Mid Grey" = "#768692"
+)
+
 
 usethis::use_data(palettes, overwrite = TRUE)

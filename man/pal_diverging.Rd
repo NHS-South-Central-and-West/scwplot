@@ -5,7 +5,7 @@
 \title{Diverging Colour Palettes}
 \usage{
 pal_diverging(
-  palette = c("blue_green", "blue_yellow_red", "blue_red"),
+  palette = c("blue_green", "blue_yellow", "blue_red"),
   alpha = 1,
   reverse = FALSE
 )
@@ -29,6 +29,8 @@ Return the SCW diverging colour palettes.
 }
 \examples{
 scales::show_col(pal_diverging(palette = "blue_green")(9))
-scales::show_col(pal_diverging(palette = "blue_yellow_red", alpha = 0.7)(9))
+scales::show_col(pal_diverging(palette = "blue_yellow")(9))
+scales::show_col(pal_diverging(palette = "blue_red")(9))
+scales::show_col(pal_diverging(palette = "blue_yellow", alpha = 0.7)(9))
 scales::show_col(pal_diverging(palette = "blue_red", reverse = TRUE)(9))
 }
