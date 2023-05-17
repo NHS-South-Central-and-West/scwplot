@@ -4,13 +4,16 @@
 \alias{pal_qualitative}
 \title{Qualitative Colour Palettes}
 \usage{
-pal_qualitative(palette = c("default"), alpha = 1)
+pal_qualitative(palette = c("default", "nhs", "scw"), alpha = 1)
 }
 \arguments{
 \item{palette}{Palette type.
-Currently there is only one qualitative colour palette available:
-\code{"default"} (a 5-colour qualitative palette that includes NHS Blue,
-NHS Warm Yellow, and SCW Dark Blue).}
+Currently there are three qualitative colour palettes available:
+\code{"default"} (a 6-colour saturated qualitative palette that includes NHS
+Blue, NHS Warm Yellow, and SCW Dark Blue), \code{"nhs"} (a 6-colour
+qualitative palette that includes NHS Blue, NHS Warm Yellow, NHS Pink, NHS
+Purple, and NHS Light Blue), and \code{scw} (a 6-colour qualitative palette
+that is made up of entirely NHS/SCW colours).}
 
 \item{alpha}{Transparency level, a real number in (0, 1].
 See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
@@ -19,5 +22,7 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 Return the SCW qualitative colour palettes.
 }
 \examples{
-scales::show_col(pal_qualitative(palette = "default")(5))
+scales::show_col(pal_qualitative(palette = "default")(6))
+scales::show_col(pal_qualitative(palette = "nhs")(6))
+scales::show_col(pal_qualitative(palette = "scw")(6))
 }
