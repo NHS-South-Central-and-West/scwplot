@@ -63,9 +63,8 @@ pal_sequential <- function(
 #' @rdname scale_sequential
 #'
 scale_colour_sequential <-
-  function(
-      ..., alpha = 1, reverse = TRUE, discrete = FALSE,
-      palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
+  function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
+           palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
     palette <- match.arg(palette)
 
     if (discrete) {
@@ -91,9 +90,8 @@ scale_color_sequential <- scale_colour_sequential
 #'
 #' @rdname scale_sequential
 scale_fill_sequential <-
-  function(
-      ..., alpha = 1, reverse = TRUE, discrete = FALSE,
-      palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
+  function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
+           palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
     palette <- match.arg(palette)
 
     if (discrete) {

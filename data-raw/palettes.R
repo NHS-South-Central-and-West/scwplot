@@ -102,7 +102,7 @@ palettes$"sequential"$"blue_grey" <- c(
 
 palettes$"sequential"$"blue_green_yellow" <- c(
   "NHS Blue" = "#005eb8",
-  "Lochmara" =  "#2A75B1",
+  "Lochmara" = "#2A75B1",
   "Boston Blue" = "#448AB0",
   "Shakespeare" = "#5E9EB2",
   "Glacier" = "#7AB1B8",
@@ -110,7 +110,7 @@ palettes$"sequential"$"blue_green_yellow" <- c(
   "Jet Stream" = "#B8D6CB",
   "Apple Green" = "#DBE7D7",
   "Floral White" = "#FFF7E6"
-  )
+)
 
 # Diverging Colour Palettes
 
@@ -124,7 +124,7 @@ palettes$"diverging"$"blue_green" <- c(
   "Morning Glory" = "#90C9C3",
   "Puerto Rico" = "#5EB7AE",
   "NHS Aqua Green" = "#00A499"
-  )
+)
 
 
 palettes$"diverging"$"blue_yellow" <- c(
@@ -137,7 +137,7 @@ palettes$"diverging"$"blue_yellow" <- c(
   "Energy Yellow" = "#F6D262",
   "Sunglow" = "#FBC439",
   "NHS Warm Yellow" = "#FFB81C"
-  )
+)
 
 palettes$"diverging"$"blue_red" <- c(
   "NHS Blue" = "#005EB8",
@@ -149,7 +149,7 @@ palettes$"diverging"$"blue_red" <- c(
   "Petite Orchid" = "#DB8996",
   "Cabaret" = "#CE5369",
   "Venetian Red" = "#B8002F"
-  )
+)
 
 
 # Qualitative Colour Palettes
@@ -161,7 +161,7 @@ palettes$"qualitative"$"default" <- c(
   "SCW Dark Blue" = "#1C355E",
   "Keppel" = "#46A39D",
   "Bali Hai" = "#8A9DAB"
-  )
+)
 
 palettes$"qualitative"$"nhs" <- c(
   "NHS Blue" = "#005EB8",
@@ -170,7 +170,7 @@ palettes$"qualitative"$"nhs" <- c(
   "Dark Cyan" = "#00978D",
   "NHS Purple" = "#330072",
   "NHS Light Blue" = "#41B6E6"
-  )
+)
 
 palettes$"qualitative"$"scw" <- c(
   "SCW Dark Blue" = "#1C355E",
@@ -180,7 +180,7 @@ palettes$"qualitative"$"scw" <- c(
   "NHS Pink" = "#AE2573",
   "NHS Green" = "#009639",
   "NHS Mid Grey" = "#768692"
-  )
+)
 
 
 usethis::use_data(palettes, overwrite = TRUE)
