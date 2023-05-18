@@ -29,6 +29,9 @@ reference:
       categories.
     contents:
       - starts_with("scale")
+  - title: Colour Palettes
+    contents:
+      - starts_with("pal")
   - title: Plot Images
     desc: >
       Incorporate images into plot figures.
