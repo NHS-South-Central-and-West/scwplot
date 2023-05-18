@@ -24,9 +24,13 @@
 #' scales::show_col(pal_sequential(palette = "blue_green_yellow")(9))
 #' scales::show_col(pal_sequential(palette = "blue_green", alpha = 0.7)(9))
 #' scales::show_col(pal_sequential(palette = "blue_green", reverse = TRUE)(9))
-pal_sequential <- function(
-    palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow"),
-    alpha = 1, reverse = FALSE) {
+pal_sequential <- function(palette = c(
+                             "blues",
+                             "dark_blues",
+                             "blue_grey",
+                             "blue_green_yellow"
+                           ),
+                           alpha = 1, reverse = FALSE) {
   palette <- match.arg(palette)
 
   if (alpha > 1L || alpha <= 0L) stop("alpha must be in (0, 1]")
@@ -61,26 +65,31 @@ pal_sequential <- function(
 #' @export scale_colour_sequential
 #'
 #' @rdname scale_sequential
-#'
-scale_colour_sequential <-
-  function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
-           palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
-    palette <- match.arg(palette)
+scale_colour_sequential <- function(..., alpha = 1,
+                                    reverse = TRUE,
+                                    discrete = FALSE,
+                                    palette = c(
+                                      "blues",
+                                      "dark_blues",
+                                      "blue_grey",
+                                      "blue_green_yellow"
+                                    )) {
+  palette <- match.arg(palette)
 
-    if (discrete) {
-      ggplot2::discrete_scale(
-        "colour", "sequential",
-        pal_sequential(palette, alpha, reverse),
-        ...
-      )
-    } else {
-      ggplot2::continuous_scale(
-        "colour", "sequential",
-        scales::gradient_n_pal(pal_sequential(palette, alpha, reverse)(9)),
-        na.value = "grey50", guide = "colourbar", ...
-      )
-    }
+  if (discrete) {
+    ggplot2::discrete_scale(
+      "colour", "sequential",
+      pal_sequential(palette, alpha, reverse),
+      ...
+    )
+  } else {
+    ggplot2::continuous_scale(
+      "colour", "sequential",
+      scales::gradient_n_pal(pal_sequential(palette, alpha, reverse)(9)),
+      na.value = "grey50", guide = "colourbar", ...
+    )
   }
+}
 
 #' @export scale_colour_sequential
 #' @rdname scale_sequential
@@ -89,22 +98,28 @@ scale_color_sequential <- scale_colour_sequential
 #' @export scale_fill_sequential
 #'
 #' @rdname scale_sequential
-scale_fill_sequential <-
-  function(..., alpha = 1, reverse = TRUE, discrete = FALSE,
-           palette = c("blues", "dark_blues", "blue_grey", "blue_green_yellow")) {
-    palette <- match.arg(palette)
+scale_fill_sequential <- function(..., alpha = 1,
+                                  reverse = TRUE,
+                                  discrete = FALSE,
+                                  palette = c(
+                                    "blues",
+                                    "dark_blues",
+                                    "blue_grey",
+                                    "blue_green_yellow"
+                                  )) {
+  palette <- match.arg(palette)
 
-    if (discrete) {
-      ggplot2::discrete_scale(
-        "fill", "sequential",
-        pal_sequential(palette, alpha, reverse),
-        ...
-      )
-    } else {
-      ggplot2::continuous_scale(
-        "fill", "sequential",
-        scales::gradient_n_pal(pal_sequential(palette, alpha, reverse)(9)),
-        na.value = "grey50", guide = "colourbar", ...
-      )
-    }
+  if (discrete) {
+    ggplot2::discrete_scale(
+      "fill", "sequential",
+      pal_sequential(palette, alpha, reverse),
+      ...
+    )
+  } else {
+    ggplot2::continuous_scale(
+      "fill", "sequential",
+      scales::gradient_n_pal(pal_sequential(palette, alpha, reverse)(9)),
+      na.value = "grey50", guide = "colourbar", ...
+    )
   }
+}
