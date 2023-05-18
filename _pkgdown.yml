@@ -2,3 +2,41 @@ url: https://nhs-south-central-and-west.github.io/scwplot/
 template:
   bootstrap: 5
 
+navbar:
+  structure:
+    right: [github]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/NHS-South-Central-and-West/scwplot
+      aria-label: GitHub
+
+reference:
+  - title: Plot Basics
+    contents:
+      - finalise_plot
+  - title: Theme
+    desc: >
+      Style ggplot figures using an SCW theme.
+    contents:
+      - theme_scw
+  - title: Colour Scales
+    desc: >
+      Distinguish how colour is used to represent data values visually. Use
+      `scale_*_sequential()` to encode numerical information that has a
+      natural order, `scale_*_diverging()` to encode numerical information that
+      has a meaningful midpoint, and use `scale_*_qualitative()` to encode
+      categories.
+    contents:
+      - scale_colour_sequential, scale_fill_sequential
+      - scale_colour_diverging, scale_fill_diverging
+      - scale_colour_qualitative, scale_fill_qualitative
+  - title: Plot Images
+    desc: >
+      Incorporate images into plot figures.
+    contents:
+      - get_images
+      - save_images
+  - title: Format Labels
+    contents:
+      - add_commas
