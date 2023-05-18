@@ -25,7 +25,14 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 while TRUE generates the colour palette in reverse order.}
 }
 \description{
-Return the SCW diverging colour palettes.
+Diverging colour palettes are used to encode numerical information that is
+ordered and has a meaningful midpoint and meaningful extreme values. For
+example, a five-point scale used to measure attitudes in a survey, from
+Strongly Agree to Strongly Disagree, with Neither Agree Nor Disagree, would
+require a diverging colour palette. Diverging palettes combine two different
+hues, with the highest chroma (the intensity of a colour) representing the
+extreme values, and the neutral midpoint value being the intersection of the
+two hues.
 }
 \examples{
 scales::show_col(pal_diverging(palette = "blue_green")(9))

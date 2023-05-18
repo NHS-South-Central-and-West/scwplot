@@ -154,33 +154,29 @@ palettes$"diverging"$"blue_red" <- c(
 
 # Qualitative Colour Palettes
 
-palettes$"qualitative"$"default" <- c(
-  "NHS Blue" = "#005eb8",
-  "Hibiscus" = "#BD2F5A",
-  "NHS Warm Yellow" = "#FFB81C",
-  "SCW Dark Blue" = "#1C355E",
-  "Keppel" = "#46A39D",
-  "Bali Hai" = "#8A9DAB"
-)
-
 palettes$"qualitative"$"nhs" <- c(
+  "NHS Dark Blue" = "#003087",
   "NHS Blue" = "#005EB8",
-  "NHS Warm Yellow" = "#FFB81C",
-  "NHS Pink" = "#AE2573",
-  "Dark Cyan" = "#00978D",
-  "NHS Purple" = "#330072",
-  "NHS Light Blue" = "#41B6E6"
+  "NHS Light Blue" = "#41B6E6",
+  "NHS Mid Grey" = "#768692",
+  "Platinum" = "#D9DDE0"
 )
 
 palettes$"qualitative"$"scw" <- c(
+  "NHS Blue" = "#005EB8",
+  "NHS Light Blue" = "#41B6E6",
+  "Persian Green" = "#00978D",
   "SCW Dark Blue" = "#1C355E",
-  "NHS Warm Yellow" = "#FFB81C",
-  "NHS Dark Red" = "#8A1538",
-  "NHS Aqua Blue" = "#00A9CE",
-  "NHS Pink" = "#AE2573",
-  "NHS Green" = "#009639",
-  "NHS Mid Grey" = "#768692"
+  "Silver" = "#C8CFD3"
 )
 
+palettes$"qualitative"$"warm" <- c(
+  "NHS Blue" = "#005EB8",
+  "NHS Warm Yellow" = "#FFB81C",
+  "Princeton Orange" = "#FA9200",
+  "NHS Mid Grey" = "#768692",
+  "SCW Dark Blue" = "#1C355E",
+  "Persian Green" = "#00978D"
+)
 
 usethis::use_data(palettes, overwrite = TRUE)

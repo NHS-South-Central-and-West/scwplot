@@ -25,7 +25,13 @@ See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 while TRUE generates the colour palette in reverse order.}
 }
 \description{
-Return the SCW sequential colour palettes.
+Sequential colour palettes are used to encode numerical information that has
+a natural order (where data can be ordered from high to low, or vice versa).
+The use of a sequential palette typically indicates that the importance or
+significance of values varies in line with the natural order of the data.
+Values with higher luminance (lighter colours) are generally those that are
+less important, and values with lower luminance (darker colours) indicates
+greater importance.
 }
 \examples{
 scales::show_col(pal_sequential(palette = "blues")(9))

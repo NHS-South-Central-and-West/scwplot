@@ -24,9 +24,10 @@ reference:
     desc: >
       Distinguish how colour is used to represent data values visually. Use
       `scale_*_sequential()` to encode numerical information that has a
-      natural order, `scale_*_diverging()` to encode numerical information that
-      has a meaningful midpoint, and use `scale_*_qualitative()` to encode
-      categories.
+      natural order (where data can be ordered from high to low, or vice versa),
+      `scale_*_diverging()` to encode numerical information that is ordered and
+      has a meaningful midpoint (for example, scales in a survey), and
+      `scale_*_qualitative()` to encode categories that have no natural order.
     contents:
       - starts_with("scale")
   - title: Colour Palettes

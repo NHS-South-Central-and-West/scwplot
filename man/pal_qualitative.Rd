@@ -4,25 +4,30 @@
 \alias{pal_qualitative}
 \title{Qualitative Colour Palettes}
 \usage{
-pal_qualitative(palette = c("default", "nhs", "scw"), alpha = 1)
+pal_qualitative(palette = c("nhs", "scw", "warm"), alpha = 1)
 }
 \arguments{
-\item{palette}{Palette type.
-Currently there are three qualitative colour palettes available:
-\code{"default"} (a 6-colour saturated qualitative palette that includes NHS
-Blue, NHS Warm Yellow, and SCW Dark Blue), \code{"nhs"} (a 6-colour
-qualitative palette that includes NHS Blue, NHS Warm Yellow, NHS Pink, NHS
-Purple, and NHS Light Blue), and \code{scw} (a 6-colour qualitative palette
-that is made up of entirely NHS/SCW colours).}
+\item{palette}{Currently there are three qualitative colour palettes
+available: \code{"scw"} (a 5-colour palette that includes NHS Blue, NHS
+Light Blue, and SCW Dark Blue), \code{"nhs"} (a 5-colour palette that
+includes NHS Dark Blue, NHS Blue, NHS Light Blue, and NHS Mid Grey), and
+\code{warm} (a 6-colour palette that includes NHS Blue, NHS Warm Yellow,
+NHS Mid Grey, and SCW Dark Blue).}
 
 \item{alpha}{Transparency level, a real number in (0, 1].
 See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}
 }
 \description{
-Return the SCW qualitative colour palettes.
+Qualitative (sometimes called categorical) colour palettes are used to encode
+categorical information that has no meaningful order. For example, car
+manufacturers or sports teams, without context that specifically indicates
+some natural order, would be unordered categories. Qualitative colour
+palettes should include colours that all have similar "perceptual weights",
+meaning that each colour is clearly distinguishable from each other, but that
+no colour is significantly more distinct than the rest of the palette.
 }
 \examples{
-scales::show_col(pal_qualitative(palette = "default")(6))
 scales::show_col(pal_qualitative(palette = "nhs")(6))
 scales::show_col(pal_qualitative(palette = "scw")(6))
+scales::show_col(pal_qualitative(palette = "warm")(6))
 }

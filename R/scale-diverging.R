@@ -1,6 +1,13 @@
 #' Diverging Colour Palettes
 #'
-#' Return the SCW diverging colour palettes.
+#' Diverging colour palettes are used to encode numerical information that is
+#' ordered and has a meaningful midpoint and meaningful extreme values. For
+#' example, a five-point scale used to measure attitudes in a survey, from
+#' Strongly Agree to Strongly Disagree, with Neither Agree Nor Disagree, would
+#' require a diverging colour palette. Diverging palettes combine two different
+#' hues, with the highest chroma (the intensity of a colour) representing the
+#' extreme values, and the neutral midpoint value being the intersection of the
+#' two hues.
 #'
 #' @param palette Currently there are two diverging colour palettes available:
 #' \code{"blue_green"} (a 9-colour blue-grey-green palette using NHS Blue, NHS
@@ -43,7 +50,7 @@ pal_diverging <-
       maxColorValue = 255L
     )
 
-    pal_ramp(unname(alpha_cols))
+    scwplot::pal_ramp(unname(alpha_cols))
   }
 
 #' SCW Diverging Colour Palettes
@@ -80,10 +87,6 @@ scale_colour_diverging <-
       )
     }
   }
-
-#' @export scale_colour_diverging
-#' @rdname scale_diverging
-scale_color_diverging <- scale_colour_diverging
 
 #' @export scale_fill_diverging
 #'
