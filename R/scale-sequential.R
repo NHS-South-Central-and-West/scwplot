@@ -1,6 +1,12 @@
 #' Sequential Colour Palettes
 #'
-#' Return the SCW sequential colour palettes.
+#' Sequential colour palettes are used to encode numerical information that has
+#' a natural order (where data can be ordered from high to low, or vice versa).
+#' The use of a sequential palette typically indicates that the importance or
+#' significance of values varies in line with the natural order of the data.
+#' Values with higher luminance (lighter colours) are generally those that are
+#' less important, and values with lower luminance (darker colours) indicates
+#' greater importance.
 #'
 #' @param palette Currently there are four sequential colour palettes available:
 #' \code{"blues"} (a 9-colour single-hue NHS Blue palette), \code{"dark_blues"}
@@ -82,10 +88,6 @@ scale_colour_sequential <-
       )
     }
   }
-
-#' @export scale_colour_sequential
-#' @rdname scale_sequential
-scale_color_sequential <- scale_colour_sequential
 
 #' @export scale_fill_sequential
 #'
