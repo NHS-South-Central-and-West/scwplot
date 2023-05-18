@@ -19,7 +19,7 @@ reference:
     desc: >
       Style ggplot figures using an SCW theme.
     contents:
-      - theme_scw
+      - starts_with("theme")
   - title: Colour Scales
     desc: >
       Distinguish how colour is used to represent data values visually. Use
@@ -28,15 +28,12 @@ reference:
       has a meaningful midpoint, and use `scale_*_qualitative()` to encode
       categories.
     contents:
-      - scale_colour_sequential, scale_fill_sequential
-      - scale_colour_diverging, scale_fill_diverging
-      - scale_colour_qualitative, scale_fill_qualitative
+      - starts_with("scale")
   - title: Plot Images
     desc: >
       Incorporate images into plot figures.
     contents:
-      - get_images
-      - save_images
+      - ends_with("images")
   - title: Format Labels
     contents:
       - add_commas
