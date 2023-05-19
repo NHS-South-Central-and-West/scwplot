@@ -1043,18 +1043,6 @@
       ],
       "Hash": "0f7cd2962e3044bb940cca4f4b5cecbe"
     },
-    "pak": {
-      "Package": "pak",
-      "Version": "0.5.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "tools",
-        "utils"
-      ],
-      "Hash": "7ef6f300721d2beb43e73f476ec3476e"
-    },
     "pbkrtest": {
       "Package": "pbkrtest",
       "Version": "0.5.2",
