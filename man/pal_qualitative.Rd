@@ -27,7 +27,7 @@ meaning that each colour is clearly distinguishable from each other, but that
 no colour is significantly more distinct than the rest of the palette.
 }
 \examples{
-scales::show_col(pal_qualitative(palette = "nhs")(6))
-scales::show_col(pal_qualitative(palette = "scw")(6))
-scales::show_col(pal_qualitative(palette = "warm")(6))
+scales::show_col(pal_qualitative(palette = "nhs")(5))
+scales::show_col(pal_qualitative(palette = "scw")(5))
+scales::show_col(pal_qualitative(palette = "warm")(5))
 }

@@ -21,9 +21,9 @@
 #' @export pal_qualitative
 #'
 #' @examples
-#' scales::show_col(pal_qualitative(palette = "nhs")(6))
-#' scales::show_col(pal_qualitative(palette = "scw")(6))
-#' scales::show_col(pal_qualitative(palette = "warm")(6))
+#' scales::show_col(pal_qualitative(palette = "nhs")(5))
+#' scales::show_col(pal_qualitative(palette = "scw")(5))
+#' scales::show_col(pal_qualitative(palette = "warm")(5))
 pal_qualitative <- function(palette = c("nhs", "scw", "warm"),
                             alpha = 1) {
   palette <- match.arg(palette)
