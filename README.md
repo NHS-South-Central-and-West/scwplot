@@ -23,9 +23,8 @@ must do so directly from this GitHub repository with {devtools}, using
 the code below:
 
 ``` r
-# install.packages('devtools')
-
-devtools::install_github("NHS-South-Central-and-West/scwplot")
+# install.packages('pak')
+pak::pak("NHS-South-Central-and-West/scwplot")
 ```
 
 If you haven’t already installed devtools, you will also have to run the
@@ -33,22 +32,41 @@ first line of code in the code chunk.
 
 ## Usage
 
-There are six primary functions in the scwplot package. The functions
-can be subdivided into SCW theme functions and additional utility
-functions.
+The primary purpose of scwplot is to extend the functionality of ggplot
+to create consistent SCW-style figures, so usage builds on top of basic
+[ggplot2](https://ggplot2.tidyverse.org/) functionality.
 
-The SCW theme functions are as follows:
+A simple example of the scwplot usage:
 
-- `scw_theme()`
-- `scale_fill_scw()` and `scale_colour_scw()`
+``` r
+library(ggplot2)
+library(scwplot)
 
-While the following functions add additional utility to the package:
+ggplot(mpg, aes(displ, hwy, fill = fl)) + geom_point(shape = 21, size = 5, stroke = 1,
+    alpha = 0.8) + labs(title = "Example {scwplot} Usage with MPG Dataset", subtitle = glue::glue("Plotting the Effect of Engine Displacement on ",
+    "Highway Miles Per Gallon, Split by Fuel Type"), caption = "Source: EPA (https://fueleconomy.gov)",
+    x = "Engine Displacement (in Litres)", y = "Miles per Gallon") + scale_fill_qualitative(palette = "scw") +
+    theme_scw()
+```
 
-- `add_commas()`
-- `finalise_plot()`
+<img src="man/figures/README-scwplot-basics-1.png" width="100%" />
+
+The package includes the following functionality:
+
+- Themes - functions for controlling the display of plot theme elements.
+- Colour - functions for incorporating the use of colour to display
+  data.
+- Images - functions for adding images (i.e., brand images and logos) to
+  plots.
+- Format - functions for applying final formatting to a plot and saving
+  it to file.
 
 ## Acknowledgements
 
 This package takes a lot of inspiration from the NHS-R community’s
 [NHSRtheme](https://github.com/nhs-r-community/NHSRtheme) package and
-BBC’s [bbplot](https://github.com/bbc/bbplot) package.
+BBC’s [bbplot](https://github.com/bbc/bbplot) package. The code, the
+structure of the repository, and the approach taken to achieve the
+package’s goals has been influenced by
+[ggplot2](https://ggplot2.tidyverse.org/) and
+[ggsci](https://nanx.me/ggsci/).
