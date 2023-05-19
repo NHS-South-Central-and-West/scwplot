@@ -50,5 +50,5 @@ While the following functions add additional utility to the package:
 ## Acknowledgements
 
 This package takes a lot of inspiration from the NHS-R community’s
-[{NHSRtheme}](https://github.com/nhs-r-community/NHSRtheme) package and
-BBC’s [{bbplot}](https://github.com/bbc/bbplot) package.
+[NHSRtheme](https://github.com/nhs-r-community/NHSRtheme) package and
+BBC’s [bbplot](https://github.com/bbc/bbplot) package.
