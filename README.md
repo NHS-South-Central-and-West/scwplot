@@ -6,19 +6,19 @@
 <!-- badges: start -->
 
 [![check-standard](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/check-standard.yaml)
-[![test-coverage](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/NHS-South-Central-and-West/scwplot/actions/workflows/test-coverage.yaml)
+[![codecov](https://codecov.io/gh/NHS-South-Central-and-West/scwplot/branch/main/graph/badge.svg?token=00PF3Y2TDL)](https://codecov.io/gh/NHS-South-Central-and-West/scwplot)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The {scwplot} package provides functions for applying consistent
+The scwplot package provides functions for applying consistent
 SCW-branded aesthetics to ggplot visualisations in R, as well as
 additional functionality that produces clean plots and makes plotting in
 R easier.
 
 ## Installation
 
-{scwplot} is not available on CRAN. In order to install the package, you
+scwplot is not available on CRAN. In order to install the package, you
 must do so directly from this GitHub repository with {devtools}, using
 the code below:
 
@@ -28,12 +28,12 @@ the code below:
 devtools::install_github("NHS-South-Central-and-West/scwplot")
 ```
 
-If you haven’t already installed {devtools}, you will also have to run
-the first line of code in the code chunk.
+If you haven’t already installed devtools, you will also have to run the
+first line of code in the code chunk.
 
 ## Usage
 
-There are six primary functions in the {scwplot} package. The functions
+There are six primary functions in the scwplot package. The functions
 can be subdivided into SCW theme functions and additional utility
 functions.
 
