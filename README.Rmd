@@ -57,7 +57,7 @@ library(ggplot2)
 library(scwplot)
 
 ggplot(mpg, aes(displ, hwy, fill = fl)) + 
-  geom_point(shape = 21, size = 5, stroke = 1, alpha = 0.8) +
+  geom_point(shape = 21, size = 6, stroke = 1, alpha = 0.8) +
   labs(title = "Example {scwplot} Usage with MPG Dataset",
        subtitle = glue::glue("Plotting the Effect of Engine Displacement on ",
                              "Highway Miles Per Gallon, Split by Fuel Type"),
