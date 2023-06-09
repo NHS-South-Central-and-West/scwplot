@@ -30,17 +30,17 @@ theme_scw <- function(base_size = 15, base_family = "sans",
 
       # Plot Elements
       plot.background = ggplot2::element_rect(fill = "white", colour = "white"),
-      plot.margin = ggplot2::margin(t = 25, b = 25, l = 25, r = 25),
+      plot.margin = ggplot2::margin(t = 20, b = 20, l = 20, r = 20),
 
       # Text Elements
       plot.title = ggplot2::element_text(
-        colour = "grey10",
+        colour = "#2E2F30",
         size = ggplot2::rel(1.6),
         face = "bold",
         hjust = 0
       ),
       plot.subtitle = ggplot2::element_text(
-        colour = "grey40",
+        colour = "#5D5F5F",
         size = ggplot2::rel(1.2),
         hjust = 0,
         lineheight = 1.4,
@@ -50,7 +50,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         )
       ),
       plot.caption = ggplot2::element_text(
-        colour = "grey60",
+        colour = "#8B8E8F",
         size = ggplot2::rel(0.9),
         hjust = 0,
         margin = ggplot2::margin(t = 25)
@@ -60,7 +60,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       legend.position = "top",
       legend.title = ggplot2::element_blank(),
       legend.text = ggplot2::element_text(
-        colour = "grey20",
+        colour = "#5D5F5F",
         size = ggplot2::rel(1.2)
       ),
       legend.key.width = ggplot2::unit(2, "cm"),
@@ -68,18 +68,18 @@ theme_scw <- function(base_size = 15, base_family = "sans",
 
       # Axis Elements
       axis.title.x = ggplot2::element_text(
-        colour = "grey20",
+        colour = "#5D5F5F",
         size = ggplot2::rel(1.2),
         vjust = -2.5
       ),
       axis.title.y = ggplot2::element_text(
-        colour = "grey20",
+        colour = "#5D5F5F",
         size = ggplot2::rel(1.2),
         vjust = 5,
         angle = 90
       ),
       axis.text = ggplot2::element_text(
-        colour = "grey20",
+        colour = "#5D5F5F",
         size = ggplot2::rel(1)
       ),
       axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5, b = 10)),
@@ -89,7 +89,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         if (grid_x) {
           ggplot2::element_line(
             linewidth = 0.5,
-            colour = "grey90",
+            colour = "#E4E7E9",
             linetype = "dashed"
           )
         } else {
@@ -99,7 +99,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         if (grid_y) {
           ggplot2::element_line(
             linewidth = 0.5,
-            colour = "grey90",
+            colour = "#E4E7E9",
             linetype = "dashed"
           )
         } else {
