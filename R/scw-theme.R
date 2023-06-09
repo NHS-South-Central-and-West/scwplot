@@ -63,6 +63,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         colour = "#5D5F5F",
         size = ggplot2::rel(1.2)
       ),
+      legend.text.align = .5,
       legend.key.width = ggplot2::unit(2, "cm"),
       legend.key = ggplot2::element_blank(),
 
