@@ -23,7 +23,7 @@ must do so directly from this GitHub repository with {devtools}, using
 the code below:
 
 ``` r
-# install.packages('pak')
+# install.packages("pak")
 pak::pak("NHS-South-Central-and-West/scwplot")
 ```
 
@@ -42,11 +42,15 @@ A simple example of the scwplot usage:
 library(ggplot2)
 library(scwplot)
 
-ggplot(mpg, aes(displ, hwy, fill = fl)) + geom_point(shape = 21, size = 6, stroke = 1,
-    alpha = 0.8) + labs(title = "Example {scwplot} Usage with MPG Dataset", subtitle = glue::glue("Plotting the Effect of Engine Displacement on ",
-    "Highway Miles Per Gallon, Split by Fuel Type"), caption = "Source: EPA (https://fueleconomy.gov)",
-    x = "Engine Displacement (in Litres)", y = "Miles per Gallon") + scale_fill_qualitative(palette = "scw") +
-    theme_scw()
+ggplot(mpg, aes(displ, hwy, fill = fl)) + 
+  geom_point(shape = 21, size = 6, stroke = 1, alpha = 0.8) +
+  labs(title = "Example {scwplot} Usage with MPG Dataset",
+       subtitle = glue::glue("Plotting the Effect of Engine Displacement on ",
+                             "Highway Miles Per Gallon, Split by Fuel Type"),
+       caption = "Source: EPA (https://fueleconomy.gov)",
+       x = "Engine Displacement (in Litres)", y = "Miles per Gallon") +
+  scale_fill_qualitative(palette = "scw") +
+  theme_scw() 
 ```
 
 <img src="man/figures/README-scwplot-basics-1.png" width="100%" />

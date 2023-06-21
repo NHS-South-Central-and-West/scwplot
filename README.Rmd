@@ -33,7 +33,6 @@ scwplot is not available on CRAN. In order to install the package, you must do s
 ```{r}
 #| label: install-scwplot
 #| eval: false
-#| tidy: true
 
 # install.packages("pak")
 pak::pak("NHS-South-Central-and-West/scwplot")
@@ -51,7 +50,6 @@ A simple example of the scwplot usage:
 #| label: scwplot-basics
 #| fig.width: 12
 #| fig.height: 8
-#| tidy: true
 
 library(ggplot2)
 library(scwplot)
