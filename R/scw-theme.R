@@ -85,7 +85,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       ),
       axis.text.x = ggplot2::element_text(
         margin = ggplot2::margin(c(t = .25, r = 0, b = .5, l = 0), unit = "cm")
-        ),
+      ),
       axis.text.y = ggplot2::element_text(
         margin = ggplot2::margin(c(t = 0, r = .5, b = 0, l = .25), unit = "cm")
       ),
