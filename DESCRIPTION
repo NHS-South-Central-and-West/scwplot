@@ -18,6 +18,7 @@ Imports:
     ggplot2,
     ggpubr,
     gt,
+    magick,
     scales
 Suggests: 
     covr,

@@ -9,11 +9,11 @@
 #'  no colour is significantly more distinct than the rest of the palette.
 #'
 #' @param palette Currently there are three qualitative colour palettes
-#' available: \code{"scw"} (a 5-colour palette that includes NHS Blue, NHS
-#' Light Blue, and SCW Dark Blue), \code{"nhs"} (a 5-colour palette that
-#' includes NHS Dark Blue, NHS Blue, NHS Light Blue, and NHS Mid Grey), and
-#' \code{warm} (a 6-colour palette that includes NHS Blue, NHS Warm Yellow,
-#' NHS Mid Grey, and SCW Dark Blue).
+#' available: \code{"scw"} (a 5-colour palette that includes SCW Dark Blue, NHS
+#' Aqua Green, NHS Blue, and NHS Light Green), \code{"nhs"} (a 5-colour palette
+#' that includes NHS Blue, NHS Light Blue, NHS Mid Grey, and NHS Dark Blue), and
+#' \code{scw_warm} (a 6-colour palette that includes NHS Blue, NHS Light Blue,
+#' SCW Dark Blue, NHS Orange, and NHS Mid Grey).
 #'
 #' @param alpha Transparency level, a real number in (0, 1].
 #' See \code{alpha} in \code{\link[grDevices]{rgb}} for details.
@@ -23,8 +23,8 @@
 #' @examples
 #' scales::show_col(pal_qualitative(palette = "nhs")(5))
 #' scales::show_col(pal_qualitative(palette = "scw")(5))
-#' scales::show_col(pal_qualitative(palette = "warm")(5))
-pal_qualitative <- function(palette = c("nhs", "scw", "warm"),
+#' scales::show_col(pal_qualitative(palette = "scw_warm")(5))
+pal_qualitative <- function(palette = c("nhs", "scw", "scw_warm"),
                             alpha = 1) {
   palette <- match.arg(palette)
 
@@ -53,7 +53,7 @@ pal_qualitative <- function(palette = c("nhs", "scw", "warm"),
 #' @rdname scale_qualitative
 #'
 scale_colour_qualitative <-
-  function(palette = c("nhs", "scw", "warm"),
+  function(palette = c("nhs", "scw", "scw_warm"),
            alpha = 1, ...) {
     palette <- match.arg(palette)
     ggplot2::discrete_scale(
@@ -67,7 +67,7 @@ scale_colour_qualitative <-
 #' @rdname scale_qualitative
 #'
 scale_fill_qualitative <-
-  function(palette = c("nhs", "scw", "warm"),
+  function(palette = c("nhs", "scw", "scw_warm"),
            alpha = 1, ...) {
     palette <- match.arg(palette)
     ggplot2::discrete_scale(

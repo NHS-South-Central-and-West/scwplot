@@ -6,17 +6,17 @@
 \alias{scale_color_qualitative}
 \title{SCW Qualitative Colour Palettes}
 \usage{
-scale_colour_qualitative(palette = c("nhs", "scw", "warm"), alpha = 1, ...)
+scale_colour_qualitative(palette = c("nhs", "scw", "scw_warm"), alpha = 1, ...)
 
-scale_fill_qualitative(palette = c("nhs", "scw", "warm"), alpha = 1, ...)
+scale_fill_qualitative(palette = c("nhs", "scw", "scw_warm"), alpha = 1, ...)
 }
 \arguments{
 \item{palette}{Currently there are three qualitative colour palettes
-available: \code{"scw"} (a 5-colour palette that includes NHS Blue, NHS
-Light Blue, and SCW Dark Blue), \code{"nhs"} (a 5-colour palette that
-includes NHS Dark Blue, NHS Blue, NHS Light Blue, and NHS Mid Grey), and
-\code{warm} (a 6-colour palette that includes NHS Blue, NHS Warm Yellow,
-NHS Mid Grey, and SCW Dark Blue).}
+available: \code{"scw"} (a 5-colour palette that includes SCW Dark Blue, NHS
+Aqua Green, NHS Blue, and NHS Light Green), \code{"nhs"} (a 5-colour palette
+that includes NHS Blue, NHS Light Blue, NHS Mid Grey, and NHS Dark Blue), and
+\code{scw_warm} (a 6-colour palette that includes NHS Blue, NHS Light Blue,
+SCW Dark Blue, NHS Orange, and NHS Mid Grey).}
 
 \item{alpha}{Transparency level, a real number in (0, 1].
 See \code{alpha} in \code{\link[grDevices]{rgb}} for details.}

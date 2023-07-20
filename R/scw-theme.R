@@ -20,7 +20,7 @@
 #'   theme_scw()
 #'
 theme_scw <- function(base_size = 15, base_family = "sans",
-                      grid_y = TRUE, grid_x = FALSE) {
+                      grid_y = TRUE, grid_x = TRUE) {
   # Use theme_minimal as basis for theme
   ggplot2::theme_minimal(
     base_size = base_size,
@@ -51,7 +51,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       ),
       plot.caption = ggplot2::element_text(
         colour = "#8B8E8F",
-        size = ggplot2::rel(0.9),
+        size = ggplot2::rel(.8),
         hjust = 0,
         margin = ggplot2::margin(t = 25)
       ),
@@ -61,7 +61,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       legend.title = ggplot2::element_blank(),
       legend.text = ggplot2::element_text(
         colour = "#5D5F5F",
-        size = ggplot2::rel(1.2)
+        size = ggplot2::rel(1.1)
       ),
       legend.text.align = .5,
       legend.key.width = ggplot2::unit(2, "cm"),
@@ -70,7 +70,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       # Axis Elements
       axis.title.x = ggplot2::element_text(
         colour = "#5D5F5F",
-        size = ggplot2::rel(1.2),
+        size = ggplot2::rel(1.1),
         vjust = -2.5
       ),
       axis.title.y = ggplot2::element_text(
@@ -83,15 +83,34 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         colour = "#5D5F5F",
         size = ggplot2::rel(1)
       ),
-      axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5, b = 10)),
+      axis.text.x = ggplot2::element_text(
+        margin = ggplot2::margin(c(t = .25, r = 0, b = .5, l = 0), unit = "cm")
+      ),
+      axis.text.y = ggplot2::element_text(
+        margin = ggplot2::margin(c(t = 0, r = .5, b = 0, l = .25), unit = "cm")
+      ),
+      axis.ticks = ggplot2::element_line(color = "#E8EDEE", linewidth = .5),
+      axis.ticks.x =
+        if (grid_x) {
+          ggplot2::element_line(color = "#E8EDEE", linewidth = .5)
+        } else {
+          ggplot2::element_blank()
+        },
+      axis.ticks.y =
+        if (grid_y) {
+          ggplot2::element_line(color = "#E8EDEE", linewidth = .5)
+        } else {
+          ggplot2::element_blank()
+        },
+      axis.ticks.length.x = ggplot2::unit(1.5, "lines"),
+      axis.ticks.length.y = ggplot2::unit(0.75, "lines"),
 
       # Panel Elements
       panel.grid.major.x =
         if (grid_x) {
           ggplot2::element_line(
-            linewidth = 0.5,
-            colour = "#E4E7E9",
-            linetype = "dashed"
+            linewidth = .5,
+            colour = "#E8EDEE"
           )
         } else {
           ggplot2::element_blank()
@@ -99,9 +118,8 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       panel.grid.major.y =
         if (grid_y) {
           ggplot2::element_line(
-            linewidth = 0.5,
-            colour = "#E4E7E9",
-            linetype = "dashed"
+            linewidth = .5,
+            colour = "#E8EDEE"
           )
         } else {
           ggplot2::element_blank()

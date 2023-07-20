@@ -155,28 +155,28 @@ palettes$"diverging"$"blue_red" <- c(
 # Qualitative Colour Palettes
 
 palettes$"qualitative"$"nhs" <- c(
-  "NHS Dark Blue" = "#003087",
   "NHS Blue" = "#005EB8",
   "NHS Light Blue" = "#41B6E6",
   "NHS Mid Grey" = "#768692",
+  "NHS Dark Blue" = "#003087",
   "Platinum" = "#D9DDE0"
 )
 
 palettes$"qualitative"$"scw" <- c(
-  "NHS Blue" = "#005EB8",
-  "NHS Light Blue" = "#41B6E6",
-  "Persian Green" = "#00978D",
   "SCW Dark Blue" = "#1C355E",
-  "Silver" = "#C8CFD3"
+  "NHS Aqua Green" = "#00A499",
+  "NHS Blue" = "#005EB8",
+  "NHS Light Green" = "#78BE20",
+  "Heather" = "#ADB6BE"
 )
 
-palettes$"qualitative"$"warm" <- c(
+palettes$"qualitative"$"scw_warm" <- c(
   "NHS Blue" = "#005EB8",
-  "NHS Warm Yellow" = "#FFB81C",
-  "Princeton Orange" = "#FA9200",
-  "NHS Mid Grey" = "#768692",
+  "NHS Light Blue" = "#41B6E6",
+  "Golden Tainoi" = "#FFC649",
   "SCW Dark Blue" = "#1C355E",
-  "Persian Green" = "#00978D"
+  "NHS Orange" = "#ED8B00",
+  "NHS Mid Grey" = "#768692"
 )
 
 usethis::use_data(palettes, overwrite = TRUE)

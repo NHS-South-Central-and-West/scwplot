@@ -4,7 +4,7 @@
 \alias{theme_scw}
 \title{Add SCW theme to ggplot figures}
 \usage{
-theme_scw(base_size = 15, base_family = "sans", grid_y = TRUE, grid_x = FALSE)
+theme_scw(base_size = 15, base_family = "sans", grid_y = TRUE, grid_x = TRUE)
 }
 \arguments{
 \item{base_size}{base font size, given in pts (default = 15)}

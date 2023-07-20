@@ -42,11 +42,14 @@ A simple example of the scwplot usage:
 library(ggplot2)
 library(scwplot)
 
-ggplot(mpg, aes(displ, hwy, fill = fl)) + 
-  geom_point(shape = 21, size = 6, stroke = 1, alpha = 0.8) +
+ggplot(mpg, aes(displ, hwy, fill = as.factor(cyl))) + 
+  geom_jitter(
+    shape = 21, size = 6, stroke = 1,
+    alpha = .8, width = .5, height = 2.5
+    ) +
   labs(title = "Example {scwplot} Usage with MPG Dataset",
        subtitle = glue::glue("Plotting the Effect of Engine Displacement on ",
-                             "Highway Miles Per Gallon, Split by Fuel Type"),
+                             "Highway Miles Per Gallon, Split by Cylinders"),
        caption = "Source: EPA (https://fueleconomy.gov)",
        x = "Engine Displacement (in Litres)", y = "Miles per Gallon") +
   scale_fill_qualitative(palette = "scw") +
