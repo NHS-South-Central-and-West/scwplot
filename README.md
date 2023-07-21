@@ -42,7 +42,7 @@ A simple example of the scwplot usage:
 library(ggplot2)
 library(scwplot)
 
-ggplot(mpg, aes(displ, hwy, fill = as.factor(cyl))) + 
+ggplot(mpg, aes(displ, hwy, fill = as.factor(cyl))) +
   geom_jitter(
     shape = 21, size = 6, stroke = 1,
     alpha = .8, width = .5, height = 2.5
@@ -53,7 +53,7 @@ ggplot(mpg, aes(displ, hwy, fill = as.factor(cyl))) +
        caption = "Source: EPA (https://fueleconomy.gov)",
        x = "Engine Displacement (in Litres)", y = "Miles per Gallon") +
   scale_fill_qualitative(palette = "scw") +
-  theme_scw() 
+  theme_scw()
 ```
 
 <img src="man/figures/README-scwplot-basics-1.png" width="100%" />

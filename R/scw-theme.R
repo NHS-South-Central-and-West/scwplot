@@ -4,7 +4,7 @@
 #' @param base_size base font size, given in pts (default = 15)
 #' @param base_family base font family (default = "sans")
 #' @param grid_y show major panel grid lines on y-axis (default = TRUE)
-#' @param grid_x show major panel grid lines on x-axis (default = FALSE)
+#' @param grid_x show major panel grid lines on x-axis (default = TRUE)
 #'
 #' @keywords ggplot theme
 #'
@@ -30,7 +30,10 @@ theme_scw <- function(base_size = 15, base_family = "sans",
 
       # Plot Elements
       plot.background = ggplot2::element_rect(fill = "white", colour = "white"),
-      plot.margin = ggplot2::margin(t = 20, b = 20, l = 20, r = 20),
+      plot.margin = ggplot2::margin(
+        c(t = 1, r = 1.2, b = 1, l = 1.2),
+        unit = "cm"
+        ),
 
       # Text Elements
       plot.title = ggplot2::element_text(
@@ -77,17 +80,18 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         colour = "#5D5F5F",
         size = ggplot2::rel(1.2),
         vjust = 5,
-        angle = 90
+        angle = 90,
+        margin = ggplot2::margin(c(t = 1), unit = "cm")
       ),
       axis.text = ggplot2::element_text(
         colour = "#5D5F5F",
         size = ggplot2::rel(1)
       ),
       axis.text.x = ggplot2::element_text(
-        margin = ggplot2::margin(c(t = .25, r = 0, b = .5, l = 0), unit = "cm")
+        margin = ggplot2::margin(c(t = .1, r = 0, b = .3, l = 0), unit = "cm")
       ),
       axis.text.y = ggplot2::element_text(
-        margin = ggplot2::margin(c(t = 0, r = .5, b = 0, l = .25), unit = "cm")
+        margin = ggplot2::margin(c(t = 0, r = .15, b = 0, l = .5), unit = "cm")
       ),
       axis.ticks = ggplot2::element_line(color = "#E8EDEE", linewidth = .5),
       axis.ticks.x =
@@ -96,14 +100,8 @@ theme_scw <- function(base_size = 15, base_family = "sans",
         } else {
           ggplot2::element_blank()
         },
-      axis.ticks.y =
-        if (grid_y) {
-          ggplot2::element_line(color = "#E8EDEE", linewidth = .5)
-        } else {
-          ggplot2::element_blank()
-        },
-      axis.ticks.length.x = ggplot2::unit(1.5, "lines"),
-      axis.ticks.length.y = ggplot2::unit(0.75, "lines"),
+      axis.ticks.length.x = ggplot2::unit(.5, "lines"),
+      axis.ticks.y = ggplot2::element_blank(),
 
       # Panel Elements
       panel.grid.major.x =

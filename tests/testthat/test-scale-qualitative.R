@@ -7,7 +7,7 @@ test_that("show qualitative palettes", {
 
   warm_pal <- scales::show_col(
     pal_qualitative(palette = "scw_warm", alpha = 1)(6)
-    )
+  )
   vdiffr::expect_doppelganger("warm-palette", warm_pal)
 })
 

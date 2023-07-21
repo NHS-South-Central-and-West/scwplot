@@ -13,7 +13,7 @@ theme_scw(base_size = 15, base_family = "sans", grid_y = TRUE, grid_x = TRUE)
 
 \item{grid_y}{show major panel grid lines on y-axis (default = TRUE)}
 
-\item{grid_x}{show major panel grid lines on x-axis (default = FALSE)}
+\item{grid_x}{show major panel grid lines on x-axis (default = TRUE)}
 }
 \description{
 This function allows you to add the SCW theme to your ggplot graphics.
