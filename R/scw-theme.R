@@ -126,7 +126,10 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       panel.grid.minor.y = ggplot2::element_blank(),
 
       # Facet Elements
-      strip.text = ggplot2::element_text(size = ggplot2::rel(1)),
+      strip.text = ggplot2::element_text(
+        size = ggplot2::rel(1),
+        margin = ggplot2::margin(b = .5, t = 0, unit = "cm")
+        ),
       complete = TRUE
     )
 }
