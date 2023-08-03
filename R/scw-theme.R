@@ -44,7 +44,7 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       ),
       plot.subtitle = ggplot2::element_text(
         colour = "#5D5F5F",
-        size = ggplot2::rel(1.2),
+        size = ggplot2::rel(1.25),
         hjust = 0,
         lineheight = 1.4,
         margin = ggplot2::margin(
@@ -73,12 +73,12 @@ theme_scw <- function(base_size = 15, base_family = "sans",
       # Axis Elements
       axis.title.x = ggplot2::element_text(
         colour = "#5D5F5F",
-        size = ggplot2::rel(1.1),
+        size = ggplot2::rel(1.15),
         vjust = -2.5
       ),
       axis.title.y = ggplot2::element_text(
         colour = "#5D5F5F",
-        size = ggplot2::rel(1.2),
+        size = ggplot2::rel(1.15),
         vjust = 5,
         angle = 90,
         margin = ggplot2::margin(c(t = 1), unit = "cm")
@@ -127,8 +127,8 @@ theme_scw <- function(base_size = 15, base_family = "sans",
 
       # Facet Elements
       strip.text = ggplot2::element_text(
-        size = ggplot2::rel(1),
-        margin = ggplot2::margin(b = .5, t = 0, unit = "cm")
+        size = ggplot2::rel(1.2),
+        margin = ggplot2::margin(b = .5, t = .5, unit = "cm")
         ),
       complete = TRUE
     )
